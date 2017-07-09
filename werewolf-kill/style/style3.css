@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/**
+ * @authors Rock Legend
+ * @date    2017-04-05 09:20:19
+ */
+body {
+  background-color: #29bde0;
+}
+.content {
+  position: relative;
+  margin: .84rem auto 1.24rem;
+  width: 80%;
+  height: 6.56rem;
+  background-color: #ffedc5;
+  border: .06rem solid #fff;
+  text-align: center;
+  font-size: 0;
+}
+#circle1 {
+  display: inline-block;
+  margin-top: 1.8rem;
+  width: 3.01rem;
+}
+#part {
+  display: none;
+}
+.circle2 {
+  margin-top: .56rem;
+  margin-bottom: .32rem;
+  width: 2.2rem;
+}
+#role {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: .4rem;
+  color: #29bde0;
+}
+#role-word {
+  width: 100%;
+  margin: 0;
+  padding-bottom: .28rem;
+  text-align: center;
+  font-size: .4rem;
+  color: #f56b81;
+  border-bottom: 2px solid #fff;
+}
+.hint {
+  padding-left: .26rem;
+  padding-right: .26rem;
+  text-align: left;
+  font-size: .26rem;
+  color: #fca000;
+}
+#identifier {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  top: -0.04rem;
+  width: 0.71rem;
+  height: 0.71rem;
+  line-height: 0.71rem;
+  font-size: .4rem;
+  text-align: center;
+  color: red;
+  background-color: #fff;
+  border: 3px solid #ffedc5;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+button {
+  width: 90%;
+  margin: 0 .31rem .1rem;
+  padding: .25rem;
+  border: none;
+  font-size: .4rem;
+  font-family: "微软雅黑 light";
+  color: #fff;
+  background-color: #fab344;
+}

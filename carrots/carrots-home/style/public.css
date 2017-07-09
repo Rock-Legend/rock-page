@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/**
+ * @authors gaoxuefeng
+ * @date    2017-05-24 10:40:36
+ */
+body {
+  font-family: "微软雅黑 light";
+}
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 2px  #eee;
+  font-size: 0;
+}
+.header .navbar {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 800px;
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+  font-size: .16rem;
+}
+.header .navbar .carrots-logo {
+  display: inline-block;
+  margin: .2rem 0 .19rem .06rem;
+  padding-right: .2rem;
+  border-right: 1px solid #e8e8e8;
+  cursor: pointer;
+}
+.header .navbar .carrots-logo .carrots-logo-img {
+  width: 2.53rem;
+}
+.header .navbar .address {
+  display: inline-block;
+  padding-left: .17rem;
+  color: #333;
+  cursor: pointer;
+}
+.header .navbar .address .iconfont-head {
+  font-size: .21rem;
+  color: #ed6264;
+}
+.header .navbar .navbar-cont {
+  display: inline-block;
+  float: right;
+}
+.header .navbar .navbar-nav li a {
+  padding: .3rem .14rem .28rem;
+  color: #2d3e50;
+  border-bottom: .02rem solid #fff;
+}
+.header .navbar .navbar-nav li a:hover,
+.header .navbar .navbar-nav li a:active {
+  color: #fc2b47;
+  border-bottom-color: #eb5255;
+}
+.header .navbar .navbar-nav li .navActive {
+  color: #fc2b47;
+  border-bottom-color: #eb5255;
+}
+.content {
+  min-width: 800px;
+  overflow: hidden;
+  background-color: #f6f7f8;
+}
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
+}
+.footer {
+  background: #fff;
+}
+.footer .footer-main {
+  margin: 0 auto;
+  max-width: 1020px;
+  min-width: 800px;
+  color: #b0b0b0;
+}
+.footer .footer-main .callme-title {
+  margin-top: .24rem;
+  margin-bottom: .2rem;
+  font-size: .16rem;
+  cursor: pointer;
+}
+.footer .footer-main .callme-slogan {
+  font-size: .14rem;
+}
+.footer .footer-main .callme-img {
+  margin-top: -5px;
+  width: .21rem;
+}
+.footer .footer-main .callme-img2 {
+  margin-top: .36rem;
+}
+.footer .footer-main .callme-way {
+  margin-bottom: .13rem;
+  font-size: .14rem;
+  color: #999;
+}
+.footer .footer-main .callme-way .iconfont-footer {
+  font-size: .22rem;
+  vertical-align: middle;
+}
+.footer .footer-main .callme-part3 {
+  text-align: center;
+}
+.footer .footer-main .callme-part3 .callme-weixin {
+  font-size: .14rem;
+  color: #999;
+}
+.copyright {
+  min-width: 800px;
+  height: .28rem;
+  line-height: .28rem;
+  text-align: center;
+  background-color: #35485b;
+  color: #999;
+  font-size: .12rem;
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 625%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  html {
+    font-size: 500%;
+  }
+}
+@media screen (max-width: 320px) and (max-width: 767px) {
+  html {
+    font-size: 312.5%;
+  }
+  .header .navbar .carrots-logo {
+    margin-top: .3rem;
+  }
+}

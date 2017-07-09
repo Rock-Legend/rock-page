@@ -1,0 +1,247 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors gaoxuefeng
+ * @date    2017-05-25 16:01:05
+ * @version $Id$
+ */
+@maxw: 1200px;
+@maxw-cont: 1020px;
+@minw: 800px;
+/* 首页内容样式集合 */
+/* 轮播图部分样式 */
+.carousel-diy1 {
+    clear: both;
+    .item{
+    	img{width:100%;}
+    }
+}
+.carousel-inner-diy1 {
+	margin: 0 auto;
+	// max-width: @maxw;
+	.item{
+		cursor: pointer;
+		img{height: 4.98rem;margin: 0 auto;}
+	}
+}
+	
+
+/* 首页第一部分内容样式 */
+.home-content1 {
+	background-color: #fff;
+}
+.home-content1-main {
+	margin: 0 auto;
+	max-width: 1020px;
+	color: #22415d;
+	.home-content1-part1{
+		margin-top: .93rem;
+		margin-bottom: 1.05rem;
+		text-align: center;
+		.home-content1-part1-p1{
+			margin-top: .14rem;
+			margin-bottom: .05rem;
+			font-size: .16rem;
+		}
+		.home-content1-part1-p2{
+			font-size: .14rem;
+			color: #456e8d;
+		}
+		&:nth-child(3){
+			border-right: 1px solid #e5e9eb;
+		}
+	}
+	.home-content1-part2{
+		margin-top: .72rem;
+		padding-left: 7.65%;/* .78rem */
+		.home-content1-part2-p{
+			font-size: .14rem;
+		}
+		span {
+			font-size: .16rem;
+			color: #fc2e54;
+		}
+	}
+}
+/* 首页第二部分 */
+.home-content2-main{
+	margin: 0 auto;
+	max-width: @maxw;
+	padding: 0 .9rem;
+	color: #22415d;
+	text-align: center;
+	.home-content2-caption {
+		text-align: center;
+		overflow: hidden;
+		zoom:1;
+		.home-content2-caption-part1{
+			margin-top: .78rem;
+			font-size: .2rem;
+			span{
+				padding-bottom: 4px;
+				border-bottom: 2px solid #f1706b;
+			}	
+		}
+		.home-content2-caption-part2{
+			margin-bottom: .28rem;
+			font-size: .16rem;
+			color: #456e8d;
+		}
+		.home-content3-caption-part2 {
+			margin-bottom: .38rem;
+			font-size: .16rem;
+		}
+		.home-content4-caption-part2 {
+			margin-bottom: .4rem;
+			font-size: .16rem;
+		}
+		.home-content2-one-part1{
+			float: right;
+			margin-bottom: .2rem;
+			color: #456e8d;
+			font-size: .16rem;
+			cursor: pointer;
+		}
+    }
+    .newjob-item{
+    	margin-bottom: 20px;
+    	text-align: center;
+    	background-color: #fff;
+    	border-radius: 5px;
+    	overflow: hidden;
+    	&:hover{
+    		box-shadow: 0 15px 20px -10px  #ccc;
+    	}
+    	.newjob-item-part1{
+    		display: flex;
+    		justify-content: center;
+			align-items: center;
+    		height: 1.86rem;
+			border-bottom: 1px solid #e5e9eb;
+			cursor: pointer;
+			img{width: 80%;height: 96%;}
+    	}
+    	.newjob-item-part2{
+    		margin-top: .14rem;
+    		margin-bottom: 0;
+    		min-height: .22rem;
+			font-size: .16rem;
+            font-weight: bold;
+            cursor: pointer;
+    	}
+    	.newjob-item-part2-border{
+    		margin: 0 auto .04rem;
+        	padding-top: .05rem;
+        	width: .2rem;
+        	border-bottom: 1px solid #e85662;
+        }
+    	.newjob-item-part3{
+    		height: .2rem;
+    		color: #456e8d;
+    		font-size: .14rem;
+    		cursor: pointer;
+    	}
+    }
+}
+/* 首页第三部分
+轮播图样式修改 */
+.carousel-diy2 {
+	margin: 0 -.9rem;
+	clear: both;
+}
+.carousel-inner-diy2{
+	margin: 0 auto .6rem;;
+	width: 86%;
+}
+.carousel-control-diy2{
+	width: 6%;
+	.chevron-left, .chevron-right{
+		position: absolute;
+		top: 40%;
+		left: 0;
+		right: 0;
+		z-index: 5
+	}
+}
+/* 首页第四部分--服务流程
+提示：标题样式使用第三部分，以下是内容部分样式 */
+.home-content3-con {
+	margin-bottom: .43rem;
+	font-size: 0;
+	.home-content3-con1 {
+		display: inline-block;
+		margin-bottom: .44rem;
+		padding: 0;
+		width: 22%;/* 2.22rem */
+		// height: 2.21rem;
+		border-radius: 10px;
+		border: 1px solid #f7f8f9;
+		box-shadow: 0 0 2px #f7f8f9;
+		color: #2d3e50;
+		font-size: .18rem;
+		overflow: hidden;
+		.home-content3-con1-img{
+			width: 100%;
+			height: 1.6rem;
+			
+		}
+		.home-content3-con1-part{
+			height: .6rem;
+			line-height: .6rem;
+		}
+	}
+	.home-content3-con2 {
+		display: inline-block;
+		width: 17%;
+		height: 1.68rem;
+		vertical-align: bottom;
+		text-align: center;
+		font-size: .1rem;
+		color: rgba(236, 88, 91, 0.3);/* #ec585b */
+		white-space:nowrap;
+	}
+	.home-content3-img{
+		// display: flex;
+		// justify-content: center;
+	}
+}
+/* 首页第五部分--伙伴之言
+提示：标题样式使用第三部分，以下是内容部分样式 */
+.home-content5-con{
+	margin: 0 auto;
+	padding-bottom: .76rem;
+    max-width: @maxw-cont + 30px;
+    .home-content5-con1{
+    	padding-top: .32rem;
+    	min-height: 2.94rem;
+    	background-color: #fff;
+    	border: 1px solid #f0f0f0;
+    	border-radius: 5px;
+    	&:hover{
+    		box-shadow: 0 15px 30px -10px  #ccc;
+    	}
+    	.home-content5-con1-img{
+    		width: .96rem;
+    		height: .96rem;
+    	}
+		.home-content5-con1-h4{
+			margin-top: .16rem;
+			margin-bottom: .09rem;
+			font-size: .16rem;
+			color: #294154;
+		}
+		.home-content5-con1-h5, .home-content5-con1-p{
+			margin-top: .09rem;
+			margin-bottom: .18rem;
+			font-size: .14rem;
+			color: #666;
+		}
+		.home-content5-con1-p{
+			margin: 0 auto .1rem;
+			width: 89%;
+			font-size: .14rem;
+			color: #999;
+			text-align: justify;
+		}
+    }
+}

@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors gaoxuefeng
+ * @date    2017-05-29 10:59:01
+ * @version $Id$
+ */
+ @maxw: 1200px;
+ @minw: 320px;
+ /* 职位详情页样式集合 */
+.jobdetails-content1{
+	margin: .2rem auto;
+	max-width: @maxw;
+	min-width: @minw;
+	background-color: #fff;
+	overflow: hidden;
+}
+.jobdetails-content1-part1, .jobdetails-content1-part2{
+	float: left;
+}
+.jobdetails-content1-part1{
+	margin-top: .4rem;
+	padding-left: .2rem;
+	padding-right: .15rem;
+	width: 66%;
+	.jobdetails-content1-part1-border{
+		margin-right: -.15rem;
+		padding-right: .15rem;
+		border-right: 3px solid #f4f4f4;
+	}
+	.content1-part1-1{
+		padding-bottom: .18rem;
+		border-bottom: 1px solid #f6f7f8;
+		color: #536a82;
+		.content1-part1-1-title{
+			margin-top: 0;
+			margin-bottom: .08rem;
+			font-size: .16rem;
+			font-weight: bold;
+			color: #2d3e50;
+		}
+		.content1-part1-1-part1{
+			margin-top: .1rem;
+			margin-bottom: .06rem;
+			font-size: .14rem;
+			.pay{color: #fc2a48;font-weight: bold;}
+			.iconfont-diy{
+				font-size: .16rem;
+				vertical-align: middle;
+			}
+		}
+		.content1-part1-1-part2{
+			margin-bottom: .06rem;
+			width: 50%;
+			.content1-part1-1-part2-pag{
+				margin-top: .14rem;
+				margin-right: .2rem;
+				padding: .02rem .1rem;
+				font-size: .12rem;
+				background-color: transparent;
+				border: 1px solid #d9d9d9;
+				border-radius: .22rem;
+			}
+		}
+		.publish-time{
+			color: #999;
+		}
+	}
+	.content1-part1-2{
+		padding-top: .16rem;
+		padding-bottom: .3rem;
+		border-bottom: 1px solid #f6f7f8; 
+		color: #536a82;
+		.content1-part1-2-title {
+			font-size: .16rem;
+			border-left: 5px solid #fc2b47;
+			font-weight: bold;
+		}
+		.content1-part1-2-part{
+			margin-bottom: .08rem;
+			font-size: .14rem;
+			width: 82%;
+		}
+	}
+	.content1-part1-3{
+		padding: .28rem 0;
+		font-size: .14rem;
+		overflow: hidden;
+		vertical-align: middle;
+		.content1-part1-3-share{
+			color: #ccc;
+			vertical-align: middle;
+			.iconfont-diy2{
+				margin-left: .1rem;
+				font-size: .22rem;
+				cursor: pointer;
+			}
+		}
+		.content1-part1-3-but{
+			float: right;
+			padding: .08rem .32rem;
+			font-size: .16rem;
+			color: #fff;
+			background-color: #fc2b47;
+			border-radius: 5px;
+			border: none;
+			outline: none;
+		}
+	}
+}
+.jobdetails-content1-part2{
+	margin-top: .4rem;
+	width: 34%;
+	height: 6.4rem;
+	color: #536a82;
+	.content1-part2-logo{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto .2rem;
+		width: 1.5rem;
+		height: 1.5rem;
+		border: 1px solid #e8e8e8;
+		img{width: 90%;}
+	}
+	.content1-part2-logohint{
+		text-align: center;
+		font-weight: bold;
+		color: #2d3e50;
+		.iconfont{
+			font-size: .12rem;
+			color: #ccc;
+		}
+	}
+	.content1-part2-com{
+		margin-top: .28rem;
+		margin-bottom: .46rem;
+		text-align: center;
+		font-weight: bold;
+		span{
+			color: #e8e8e8;
+		}
+	}
+	.content1-part2-mess{
+		margin-left: .98rem;
+		margin-top: .3rem;
+		font-size: .14rem;
+		color: #536a82;
+	}
+}

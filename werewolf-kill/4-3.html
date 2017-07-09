@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>投票、杀手杀人页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style/style4-1.css">
+    <link rel="stylesheet" href="style/public.css">
+</head>
+<body>
+	<header>
+		<div class="part1"><a href="#"><!-- <img src="images/meun2.png" alt="菜单"> --></a></div>
+		<span>投票</span>
+		<div class="part2"><a href="#"><!-- <img src="images/close.png" alt="关闭"> --></a></div>
+	</header>
+	<div class="headercopy"></div>
+	<div class="hint"><span>发言讨论结束，大家请投票</span>
+		<div class="circle">
+		<audio id="music" src="audio/Welcome to the Brotherhood.mp3"  loop="loop"></audio>
+		<a href="javascript:playPause();"><img src="images/play.png" id="music_btn" alt="播放按钮"></a>
+		</div>
+	</div>
+	<div class="hintway">
+		<div id="triangle-down"></div>
+		<p>点击得票数最多人的头像</p>
+	</div>
+	<div class="main">
+		<div class="main-piece" id="main-part">
+			<div class="part">
+				<div class="role"><a href="#choose">水民</a></div>
+				<div class="number">1号</div>
+			</div>
+			<div id="choose" class="chooseway">
+				<button class="kill"></button>
+				<!-- <button class="find"></button>
+				<button class="kill2"></button>
+				<button class="live"></button> -->	
+			</div>
+		</div>
+		
+		
+	</div>
+    <div class="footercopy"></div>
+	<footer>
+		<button id="vote">投死</button>
+	</footer>
+	<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="js/js04.js"></script>
+
+</body>
+</html>

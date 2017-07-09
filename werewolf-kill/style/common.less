@@ -1,0 +1,80 @@
+@charset: "utf-8";
+.fl() {float: left;}
+.fr() {float: right;}
+.a() {
+	color: #fff;
+	text-decoration: none;
+	cursor:pointer;
+	&:hover {color: #fff;}
+}
+.border-radius(@radius) {
+	border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-ms-border-radius: @radius;
+}
+.pos(@pos){position: @pos;}
+.fix(top) {
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+}
+.fix(bottom) {
+	position: fixed;
+	bottom: 0;
+	z-index: 9999;
+}
+.posn(center) {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+	text-transform: translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+}
+.posn(vc) {
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+	top:0;
+	bottom: 0;
+	margin: auto;
+	overflow: auto;
+}
+.clearfix() {
+	zoom: 1;
+	&:after {
+		content: "";
+		width: 0;
+		height: 0;
+		display: block;
+		visibility: hidden;
+		clear: both;
+	}
+}
+.border-radius(@radius) {
+	border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+.a(@color) {
+	color: @color;
+	text-decoration: none;
+	cursor: pointer;
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+.caret(@top) {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: (@top/2);
+	vertical-align: middle;
+	border-top: @top solid;
+	border-right: (@top/2) solid transparent;
+    border-left: (@top/2) solid transparent;
+}

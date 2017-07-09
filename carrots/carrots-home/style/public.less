@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/**
+ * @authors gaoxuefeng
+ * @date    2017-05-24 10:40:36
+ */
+@maxw: 1200px;
+@maxw-cont: 1020px;
+@minw: 800px;
+@ffy: "微软雅黑 light";
+//设置全局样式
+body {
+	font-family: @ffy;
+}
+//顶部导航栏样式
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 2px  #eee;
+    font-size: 0;
+    	.navbar {
+    		margin: 0 auto;
+    		max-width: @maxw;
+    	    min-width: @minw;
+    	    background-color: #fff;
+    	    border: none;
+			border-radius: 0;
+			font-size: .16rem;
+			.carrots-logo {
+	    		display: inline-block;
+	            margin: .2rem 0 .19rem .06rem;
+	            padding-right:  .2rem;
+	            border-right: 1px solid #e8e8e8;
+	            cursor: pointer;
+	            .carrots-logo-img{
+	            	width: 2.53rem;
+	            }
+	    	}
+	    	.address{
+	    		display: inline-block;
+	    		padding-left: .17rem;	
+	    		color: #333;
+	    		cursor: pointer;
+	    		.iconfont-head{font-size: .21rem; color: #ed6264;}
+	    	}
+			.navbar-cont {
+				display: inline-block;
+				float: right;	
+			}
+			.navbar-nav {
+				li {
+					a {
+						padding: .3rem .14rem .28rem;
+						color: #2d3e50;
+						border-bottom: .02rem solid #fff;
+						&:hover, &:active {
+							color:#fc2b47;
+							border-bottom-color: #eb5255;
+							// transition: width 2s;
+							// -moz-transition: width 2s; /* Firefox 4 */
+							// -webkit-transition: width 2s; /* Safari 和 Chrome */
+							// -o-transition: width 2s; /* Opera */
+						} 
+					}
+					.navActive{
+						color:#fc2b47;
+						border-bottom-color: #eb5255;
+					}
+				}
+			}
+		
+		}
+    }
+	
+//设置主体内容样式
+.content {
+	min-width: @minw;
+	overflow: hidden;
+	background-color: #f6f7f8;
+}
+//首页、找职位、找精英页面轮播图公共导航样式集合
+//去掉原生轮播两侧导航的渐变阴影
+.carousel-control.right, .carousel-control.left{
+	background-image: none;
+}
+//底部导航栏样式
+.footer{
+	background: #fff;
+	.footer-main {
+		margin: 0 auto;
+		max-width: @maxw-cont;
+		min-width: @minw;
+		color:#b0b0b0;
+		.callme-title {
+			margin-top: .24rem;
+			margin-bottom: .2rem;
+			font-size: .16rem;
+			cursor: pointer;
+		}
+		.callme-slogan{
+			font-size: .14rem;
+		}
+		.callme-img{
+			margin-top: -5px;
+			width: .21rem;
+		}
+		.callme-img2 {
+			margin-top: .36rem;
+		}
+		.callme-way {
+			margin-bottom: .13rem;
+			font-size: .14rem;
+			color:#999;
+			.iconfont-footer{
+				font-size: .22rem;
+				vertical-align: middle;
+			}
+		}
+		.callme-part3 {
+			text-align: center;
+			.callme-weixin {
+				font-size: .14rem;
+				color:#999;
+			}
+		}
+	}
+}
+.copyright {
+	min-width: @minw;
+	height: .28rem;
+	line-height: .28rem;
+	text-align: center;
+	background-color: #35485b;
+	color: #999;
+	font-size: .12rem;
+}
+@media screen and (min-width:1200px) {
+	html {font-size: 625%;}
+}
+@media screen and (max-width:1199px)  {
+	html {font-size: 500%;}
+}
+
+@media screen (max-width:320px) and (max-width:767px)  {
+	html {font-size: 312.5%;}
+	.header .navbar .carrots-logo {
+		margin-top: .3rem;
+	}
+}

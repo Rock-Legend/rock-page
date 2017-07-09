@@ -1,0 +1,39 @@
+<!-- 无公司搜索结果页 推荐三个公司-->
+		<div class="notfind-content1">
+    		<div class="notfind-content1-part1">
+    			<img class="notfind-content1-part1-img" src="images/notfind.png">
+    		</div>
+    		<div class="notfind-content1-part2">
+    			<p class="notfind-content1-part2-hint1">暂时没有符合该搜索条件的公司</p>
+    			<p class="notfind-content1-part2-hint2">请重新修改搜索条件后再次进行搜索</p>
+    		</div>
+    	</div>
+    	<div class="notfind-content2">
+    		<p class="notfind-content2-top">推荐公司</p>
+    		<div class="row notfind-content2-main">
+    			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" ng-repeat="n in vm.notCParams">
+    				<div class="content2-main-item">
+	    				<div class="content2-main-item-logo" ui-sref="companyDetails.product({comId:n.id})">
+	    					<img src="{{n.logo}}" alt="公司logo">
+	    				</div>
+	    				<div class="content2-main-item-caption">
+							<h4 class="content2-main-item-caption-top" ui-sref="companyDetails.product({comId:n.id})">{{n.name}}</h4>
+							<p class="content2-main-item-caption-part">{{n.slogan}}</p>
+							<p><span class="content2-main-item-caption-hint">{{n.totalNum}} </span>个在招职位</p>
+	    				</div>
+	    				<div class="content2-main-item-genre">
+							<div class="content2-main-item-genre-part1">
+								<i class="iconfont icon-yidonghulianwang-copy"></i> {{n.industry | industry}}
+							</div>
+							<div class="content2-main-item-genre-part2">
+								<i class="iconfont icon-shangshigongsi"></i> {{n.finacing | financing}}
+							</div>
+							<div class="content2-main-item-genre-part3">
+								<i class="iconfont icon-llcouponsupportedshopaddress"></i> {{n.province | province}}
+							</div>
+						</div>
+	    			</div>			
+    			</div>
+    		</div>
+    		<div class="notfind-content2-border"></div>
+    	</div>

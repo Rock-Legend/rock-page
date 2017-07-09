@@ -1,0 +1,190 @@
+        <!-- 轮播图显示区-->
+	    <div id="carousel-home-1" class="carousel slide carousel-diy1" data-ride="carousel" data-interval="3000">
+		    <!-- Indicators 轮播图下方导航按钮-->
+		    <!-- <ol class="carousel-indicators">
+			    <li data-target="#carousel-home-1" data-slide-to="{{$index}}" ng-repeat="n in vm.bParams" ng-class="{active:!$index}"></li>
+			</ol> -->
+		  <!-- Wrapper for slides 轮播图主体内容 -->
+		    <div class="carousel-inner  carousel-inner-diy1" role="listbox">
+			    <div class="item" ng-class="{active:!$index}" ng-repeat="n in vm.bParams" ng-click="goToUrl(n.url)">
+			      	<img src="{{n.img}}" alt="首页轮播图">
+			    </div>
+		    </div>
+		  <!-- Controls 轮播图两侧导航按钮 href="#carousel-example-generic"不可以去掉，否则无法使用两侧导航按钮-->
+		   <!--  <a class="left carousel-control" data-target="#carousel-home-1" role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+		    </a>
+		    <a class="right carousel-control" data-target="#carousel-home-1" role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+		    </a> -->
+		</div>
+		<!-- 介绍 -->
+		<div class="home-content1">
+			<div class="row home-content1-main">
+		    	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 home-content1-part1">
+		    		<img class="lazy" data-original="images/home1.png">
+		    		<p class="home-content1-part1-p1"><b>超短响应时间</b></p>
+		    		<p class="home-content1-part1-p2">48小时高效推荐</p>
+		    	</div>
+		    	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 home-content1-part1">
+		    		<img class="lazy" data-original="images/home2.png">
+		    		<p class="home-content1-part1-p1"><b>行业1/3的价格</b></p>
+		    		<p class="home-content1-part1-p2">成功推荐仅收费1月工资</p>
+		    	</div>
+		    	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 home-content1-part1">
+		    		<img class="lazy" data-original="images/home3.png">
+		    		<p class="home-content1-part1-p1"><b>三维的人才评测</b></p>
+		    		<p class="home-content1-part1-p2">技术人事背景三维评定</p>
+		    	</div>
+		    	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 home-content1-part2">
+		    		<p class="home-content1-part2-p"><span>500+</span><br><b>人才入职</b></p>
+		    		<p class="home-content1-part2-p"><span>498人</span><br><b>成功转正</b></p>
+		    		<p class="home-content1-part2-p"><span>98%</span><br><b>成功率</b></p>
+		    	</div>
+		    </div>
+		</div>
+	    <!-- 最新职位 -->
+	    <div class="home-content2">
+		    <div class="row home-content2-main">
+		    	<div class= "home-content2-caption">
+		    		<p class="home-content2-caption-part1"><b>最<span>新职</span>位</b></p>
+		    		<p class="home-content2-caption-part2">NEW POSITION</p>
+		    		<p class="home-content2-one-part1" ui-sref="newjob({page:1,size:8})">更多 <i class="iconfont icon-youcedianji"></i></p>
+		    	</div>
+		    	<div id="carousel-home-2" class="carousel slide carousel-diy2" data-ride="carousel" data-interval="3000">
+					  <!-- Indicators 轮播图下方导航按钮-->
+					<!-- <ol class="carousel-indicators">
+					    <li data-target="#carousel-home-2" data-slide-to="{{$index}}" ng-repeat="x in vm.nJParams" ng-class="{active:!$index}"></li>
+					</ol> -->
+					  <!-- Wrapper for slides 轮播图主体内容 -->
+					<div class="carousel-inner carousel-inner-diy2" role="listbox">
+					    <div class="item row" ng-class="{active:!$index}" ng-repeat="x in vm.nJParams">
+					    	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-repeat="y in x track by $index">
+					      		<div class="newjob-item">
+					      			<div class="newjob-item-part1" ui-sref="jobDetails({profId:x[$index].id, comId:x[$index].companyId})">
+					      				<img  src="{{y.companyLogo}}" alt="公司logo">
+					      			</div>
+					      			<p class="newjob-item-part2" ui-sref="jobDetails({profId:x[$index].id, comId:x[$index].companyId})">{{y.name}}
+					      			</p>
+					      			<div class="newjob-item-part2-border"></div>
+					      			<p class="newjob-item-part3" ui-sref="companyDetails.product({comId:x[$index].companyId})">{{y.companyName}}</p>
+					      		</div>
+					      	</div>
+					    </div>
+					</div>
+					  <!-- Controls 轮播图两侧导航按钮 href="#carousel-example-generic"不可以去掉，否则无法使用两侧导航按钮-->
+					<a class="left carousel-control carousel-control-diy2" data-target="#carousel-home-2" role="button" data-slide="prev">
+					    <span class="chevron-left" aria-hidden="true">
+					    	<img src="images/home-new-pre.png" alt="上一页">
+					    </span>
+					    <span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control carousel-control-diy2" data-target="#carousel-home-2" role="button" data-slide="next">
+					    <span class="chevron-right" aria-hidden="true">
+					    	<img src="images/home-new-next.png" alt="下一页">
+					    </span>
+					    <span class="sr-only">Next</span>
+					</a>
+			    </div>
+		    </div>
+		</div>
+		<!-- 首页第四部分：服务流程 -->
+		<div class="home-content1">
+		    <div class="row home-content2-main">
+		    	<div class= "home-content2-caption">
+		    		<p class="home-content2-caption-part1"><b>服<span>务流</span>程</b></p>
+		    		<p class="home-content3-caption-part2">SERVICE FLOW</p>
+		    	</div>
+		    	<div class="home-content3-con">
+			    	<div class=" home-content3-con1">
+			    		<img class="lazy home-content3-con1-img" data-original="images/home-ser1.png">
+			    		<p class="home-content3-con1-part"><b>1.意向洽谈，深入评审</b></p>
+			    	</div>
+			    	<div class="home-content3-con2">
+			    	    — — — 
+			    		<img class="lazy home-content3-img" data-original="images/home-ser-shape.png">
+			    		— — — 
+			    	</div>
+			    	<div class=" home-content3-con1">
+			    		<img class="lazy home-content3-con1-img" data-original="images/home-ser2.png">
+			    		<p class="home-content3-con1-part"><b>2.确认合作，签订合同</b></p>
+			    	</div>
+			    	<div class="home-content3-con2">
+			    		— — — 
+			    		<img class="lazy home-content3-img" data-original="images/home-ser-shape.png">
+			    		— — — 
+			    	</div>
+			    	<div class="home-content3-con1">
+			    		<img class="lazy home-content3-con1-img" data-original="images/home-ser3.png">
+			    		<p class="home-content3-con1-part"><b>3.提出要求，提供jd</b></p>
+			    	</div>
+			    	<div class="home-content3-con1">
+			    		<img class="lazy home-content3-con1-img" data-original="images/home-ser4.png">
+			    		<p class="home-content3-con1-part"><b>4.开始招聘，人才海选</b></p>
+			    	</div>
+			    	<div class="home-content3-con2">
+			    		— — —
+			    		<img class="lazy home-content3-img" data-original="images/home-ser-shape.png">
+			    		— — — 
+			    	</div>
+			    	<div class="home-content3-con1">
+			    		<img class="lazy home-content3-con1-img" data-original="images/home-ser5.png">
+			    		<p class="home-content3-con1-part"><b>5.人才评测，简历脱水</b></p>
+			    	</div>
+			    	<div class="home-content3-con2">
+			    		— — — 
+			    		<img class="lazy home-content3-img" data-original="images/home-ser-shape.png">
+			    		— — — 
+			    	</div>
+			    	<div class="home-content3-con1">
+				    	<img class="lazy home-content3-con1-img" data-original="images/home-ser6.png">
+				    	<p class="home-content3-con1-part"><b>6.上岗，转入售后</b></p>
+			    	</div>
+			    </div>
+		    </div>  
+		</div>
+		<!-- 首页第五部分：伙伴之言 -->
+		<div class="home-content2">
+		    <div class="home-content2-main">
+		    	<div class= "home-content2-caption">
+		    		<p class="home-content2-caption-part1"><b>伙<span>伴之</span>言</b></p>
+		    		<p class="home-content4-caption-part2">PARTNER ADVICE</p>
+		    	</div>
+				<div class="row home-content5-con">
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+						<div class="home-content5-con1">
+							<img class="lazy home-content5-con1-img" data-original="images/home-par1.png">
+							<h4 class="home-content5-con1-h4"><b>王大锤</b></h4>
+							<h5 class="home-content5-con1-h5">托儿所集团创始人</h5>
+							<p class="home-content5-con1-p">作为在萝卜多已经招募了50人的leader，萝卜多除了是我成功的基石，也是我的社交入口。</p>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+						<div class="home-content5-con1">
+							<img class="lazy home-content5-con1-img" data-original="images/home-par2.png">
+							<h4 class="home-content5-con1-h4"><b>王大锤</b></h4>
+							<h5 class="home-content5-con1-h5">托儿所集团创始人</h5>
+							<p class="home-content5-con1-p">作为在萝卜多已经招募了50人的leader，萝卜多除了是我成功的基石，也是我的社交入口。</p>
+						</div>
+					</div>
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+						<div class="home-content5-con1">
+							<img class="lazy home-content5-con1-img" data-original="images/home-par3.png">
+							<h4 class="home-content5-con1-h4"><b>王大锤</b></h4>
+							<h5 class="home-content5-con1-h5">托儿所集团创始人</h5>
+							<p class="home-content5-con1-p">作为在萝卜多已经招募了50人的leader，萝卜多除了是我成功的基石，也是我的社交入口。</p>
+						</div>
+					</div>
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+						<div class="home-content5-con1">
+							<img class="lazy home-content5-con1-img" data-original="images/home-par4.png">
+							<h4 class="home-content5-con1-h4"><b>王大锤</b></h4>
+							<h5 class="home-content5-con1-h5">托儿所集团创始人</h5>
+							<p class="home-content5-con1-p">作为在萝卜多已经招募了50人的leader，萝卜多除了是我成功的基石，也是我的社交入口。</p>
+						</div>
+					</div>
+				</div>
+		    </div>
+		</div>

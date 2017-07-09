@@ -1,0 +1,11 @@
+
+<p class="f_backcap"><span>模块编辑</span></p>
+<div class="f_modify">
+    <label>名&emsp;&emsp;称&emsp;<input class="form-control" type="text" ng-model="vm.module.name"></label><br>
+    <label>Menuld&ensp;&emsp;<input class="form-control" type="text" ng-model="vm.module.menuID"></label><br>
+    <label>URL地址&emsp;<input class="form-control" type="text" ng-model="vm.module.url"></label><br>
+    <label>父模块ID&emsp;<input class="form-control" type="text" ng-model="vm.module.parentID"></label><br>
+    <label>模块类别&emsp;<input class="form-control" type="text" ng-model="vm.module.type"></label><br>
+    <button class="btn btn-success" ng-click="vm.f_save()">保存</button>
+    <button class="btn" ui-sref="field.module">取消</button>
+</div>

@@ -1,0 +1,9 @@
+<div class="row aboutus">
+  	<div class="col-xs-3 col-sm-3 col-md-3 aboutus-side">
+  		<div class="aboutus-sidebar">
+  			<a class="aboutus-sidebar-main" ng-class="{active: $state.is('withus.aboutus')}" ui-sref-opts="{reload: true}" ui-sref="withus.aboutus"><i class="iconfont iconfont-diy8 icon-userpro"></i> 关于我们</a>
+  			<a class="aboutus-sidebar-main" ng-class="{active: $state.is('withus.callus')}" ui-sref-opts="{reload: true}"  ui-sref="withus.callus"><i class="iconfont iconfont-diy8 icon-dianhua"></i> 联系我们</a>
+  		</div>
+  	</div>
+  	<div ui-view></div>
+</div>

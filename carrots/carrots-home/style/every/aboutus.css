@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors gaoxuefeng FR
+ * @date    2017-05-24 20:31:35
+ * @version $Id$
+ */
+.aboutus {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 800px;
+}
+.aboutus .aboutus-side {
+  padding: 0;
+}
+.aboutus .aboutus-sidebar {
+  margin-top: .2rem;
+  margin-right: .5rem;
+  padding: .7rem 0;
+  text-align: center;
+  background-color: #fff;
+}
+.aboutus .aboutus-sidebar .aboutus-sidebar-main {
+  display: block;
+  height: .4rem;
+  line-height: .4rem;
+  color: #2b3d51;
+  font-size: .16rem;
+  text-decoration: none;
+}
+.aboutus .aboutus-sidebar .aboutus-sidebar-main:hover,
+.aboutus .aboutus-sidebar .aboutus-sidebar-main:active {
+  color: #fc2b47;
+  background-color: #f7f7f7;
+  border-left: 5px solid #fc2b47;
+}
+.aboutus .aboutus-sidebar .active {
+  color: #fc2b47;
+  background-color: #f7f7f7;
+  border-left: 5px solid #fc2b47;
+}
+.aboutus .aboutus-content {
+  margin: .2rem 0;
+  padding: .7rem .9rem 2.48rem .8rem;
+  background-color: #fff;
+  color: #2b3d51;
+}
+.aboutus .aboutus-content h4 {
+  margin-bottom: .38rem;
+  padding-left: .09rem;
+  border-left: 5px solid #fc2b47;
+}
+.aboutus .aboutus-content .aboutus-content-1 {
+  margin-bottom: .38rem;
+  font-size: .14rem;
+}
+.aboutus .aboutus-content .aboutus-content-2 {
+  margin-bottom: .18rem;
+  font-size: .14rem;
+}
+.aboutus .callus-content {
+  margin: .2rem 0;
+  padding: .7rem .52rem .8rem .8rem;
+  background-color: #fff;
+}
+.aboutus .callus-content:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.aboutus .callus-content h4 {
+  margin-bottom: .16rem;
+  border: none;
+}
+.aboutus .callus-content .callus-content-1 {
+  margin-bottom: .06rem;
+}
+.aboutus .callus-content .callus-content-2 {
+  margin-bottom: .28rem;
+}
+.aboutus .callus-content .callus-content-1,
+.aboutus .callus-content .callus-content-2 {
+  padding-left: 0;
+}
+.aboutus .callus-content .companyadd {
+  padding: 0;
+  height: 3.38rem;
+}
+.aboutus .callus-content .companyadd img {
+  width: 100%;
+}
+.iconfont-diy8 {
+  font-size: .16rem;
+  vertical-align: middle;
+}
+.iconfont-diy9 {
+  margin-left: .2px;
+}
+@media screen and (min-width: 1200px) {
+  .aboutus-side {
+    width: 2.7rem;
+    float: left;
+  }
+  .aboutus-content,
+  .callus-content {
+    width: 9.3rem;
+    float: left;
+  }
+}

@@ -1,0 +1,39 @@
+<!-- 无职位搜索结果页 推荐三个职位-->
+		<div class="notfind-content1">
+    		<div class="notfind-content1-part1">
+    			<img class="notfind-content1-part1-img" src="images/notfind.png">
+    		</div>
+    		<div class="notfind-content1-part2">
+    			<p class="notfind-content1-part2-hint1">暂时没有符合该搜索条件的职位</p>
+    			<p class="notfind-content1-part2-hint2">请重新修改搜索条件后再次进行搜索</p>
+    		</div>
+    	</div>
+    	<div class="notfind-content2">
+    		<p class="notfind-content2-top">推荐职位</p>
+    		<div class="row notfind-content2-main">
+    			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" ng-repeat="m in vm.notCParams">
+    				<div class="content2-main-item">
+	    				<div class="content2-main-item-logo">
+	    					<img src="{{m.companyLogo}}" alt="公司logo">
+	    				</div>
+	    				<div class="content2-main-item-caption">
+							<h4 class="content2-main-item-caption-top">{{m.name}}</h4>
+							<p>{{m.compensation | compensation}}</p>
+							<p>{{m.companyName}}</p>
+	    				</div>
+	    				<!-- <div class="content2-main-item-genre">
+							<div class="content2-main-item-genre-part1">
+								<i class="iconfont icon-yidonghulianwang-copy"></i> 移动互联网
+							</div>
+							<div class="content2-main-item-genre-part2">
+								<i class="iconfont icon-shangshigongsi"></i> 上市
+							</div>
+							<div class="content2-main-item-genre-part3">
+								<i class="iconfont icon-llcouponsupportedshopaddress"></i> 北京
+							</div>
+						</div> -->
+	    			</div>			
+    			</div>
+    		</div>
+    		<div class="notfind-content2-border"></div>
+    	</div>

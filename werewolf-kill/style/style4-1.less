@@ -1,0 +1,143 @@
+@charset:utf-8;
+@import "common";
+@maxw:640px;
+@minw:310px;
+@headbgc:#29bde0;
+@hintbgc:#b9e9f5;
+@circlebgc:#fbb435;
+@partbgc:#f5c97b;
+@numbgc:#83b09a;
+@footbgc:#fbb435;
+@ffy:"微软雅黑 light";
+body {background-color: @headbgc!important;}
+.hint {
+	padding-left: .46rem;
+	height: .82rem;
+	line-height: .82rem;
+	background-color: @hintbgc;
+	font-size: .26rem;
+    .circle {
+    	.pos(relative);
+    	.fr();
+    	right: .15rem;
+    	margin: .15rem 0;
+    	display: inline-block;
+    	width: .52rem;
+    	height: .52rem;
+    	.border-radius(50%);
+    	text-align: center;
+    	background-color: @circlebgc;
+    	img{
+    		.posn(vc);
+    		left: .05rem;
+    		width: .27rem;
+    		&:link, &:visited, &:hover, &:active {
+    			transition-duration: 10s;
+    			transform-origin: 20% 50%;
+    			-webkit-transform-origin: 20% 50%;
+    			transform: rotate(360deg);
+    			-ms-transform: rotate(360deg);		/* IE 9 */
+    			-webkit-transform: rotate(360deg);	/* Safari and Chrome */
+    			-o-transform: rotate(360deg);		/* Opera */
+    			-moz-transform: rotate(360deg);		/* Firefox */
+    		}
+    	}
+    }
+}
+.hintway {
+	padding-left: .7rem;
+	font-size: .24rem;
+	color:#fff;
+	#triangle-down {
+		width: 0;
+		height: 0;
+		border-top: 15px solid #b9e9f5;
+		border-right: 7.5px solid transparent;
+		border-left: 7.5px solid transparent; 
+	}
+	p{margin: .12rem 0;}
+}
+.main{
+	.clearfix();
+	width: 94%;
+	margin: .36rem auto 0;
+	.main-piece {
+		.fl();
+		width: 33.3333%;
+		&:hover .chooseway {opacity: 1;}
+		.part{
+			margin: 0 .15rem .2rem;
+	        background-color: @partbgc;
+	        border: 2px solid #fff;
+	        font-size: .3rem;
+	        .role{
+	        	padding:.36rem .32rem;
+	        	text-align: center;
+	        	a{
+	        		.a(fff);
+	        		color: #000;
+	        	}
+	        }
+	        .number{
+	        	background-color: @numbgc;
+	        	text-align: center;
+	        	font-size: .23rem;
+	        	color: #fff;
+	        }
+	    } 
+	    .chooseway {
+		    opacity: 0;
+		    text-align: center;
+		    font-size: 0;
+	    	button{
+	    		display: inline-block;
+			    width: .38rem;
+		        height: .38rem;
+		        margin: .1rem .01rem .2rem;
+		        background: url(../images/choose.png) no-repeat;
+		        background-size: 1.56rem .38rem;
+		        border: none;
+	    	}
+	    	.kill{background-position: 0 0;}
+	    	// .find{background-position: -.40rem 0;}
+	    	// .kill2{background-position: -.79rem 0;}
+	    	// .live{background-position: -1.19rem 0;}
+	    } 
+	}	
+}
+.footercopy{height: 1.9rem;}
+footer {
+	.fix(bottom);
+	max-width: @maxw;
+	min-width: @minw;
+	width: 100%;
+    text-align: center;
+    background-color: @headbgc;
+	button {
+		width: 80%;
+		margin: .4rem auto .6rem;
+		padding: .25rem 0;
+		border:none;
+		outline: none;
+		background-color: @footbgc;
+		color: #fff;
+		font-size: .4rem;
+        font-family: @ffy;
+        cursor: pointer;
+	}
+}
+@media screen and (max-width:700px) {
+	html{font-size: 580%;}
+}
+@media screen and (max-width:600px) {
+	html{font-size: 500%;}
+}
+@media screen and (max-width:500px) {
+	html{font-size: 440%;}
+}
+@media screen and (max-width:425px) {
+	html{font-size: 350%;}
+}
+@media screen and (max-width:380px) {
+	html{font-size: 312.5%;}
+}

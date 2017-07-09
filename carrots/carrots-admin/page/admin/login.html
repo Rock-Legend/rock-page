@@ -1,0 +1,38 @@
+<!--登录框-->
+<div class="f_loginpage">
+    <div class="f_login">
+        <h3 class="f_title">萝卜多后台登录</h3>
+        <form name="f_go" novalidate>
+            <label class="box">
+                <svg class="icon f_user1" aria-hidden="true">
+                    <use xlink:href="#icon-yonghu"></use>
+                </svg>
+                <input class="form-control" type="text" ng-model="vm.f_userName" name="userName" ng-minlength="5" ng-maxlength="12" pattern="^[A-Za-z\d\S]+$" placeholder="用户名" required/>
+            </label><br>
+            <div class="f_tipcap">
+                <div class="tips" ng-messages="f_go.userName.$error" ng-if="f_go.userName.$touched">
+                    <p ng-message="required">请输入账号</p>
+                    <p ng-message="minlength">账号最少为5位</p>
+                    <p ng-message="maxlength">账号最多为12位</p>
+                    <p ng-message="pattern">账号为字母或数字</p>
+                </div>
+            </div>
+            <label class="box">
+                <svg class="icon f_user2" aria-hidden="true">
+                    <use xlink:href="#icon-suo"></use>
+                </svg>
+                <input class="form-control" ng-model="vm.f_passWord" type="password" name="password" maxlength="12" ng-minlength="5" placeholder="密码" pattern="^[A-Za-z\d\S]+$" required>
+            </label>
+            <div class="f_tipcap">
+                <div class="tips" ng-messages="f_go.password.$error" ng-if="f_go.password.$touched">
+                    <p ng-message="required">请输入密码</p>
+                    <p ng-message="minlength">密码最少为5位</p>
+                    <p ng-message="pattern">账号为字母或数字</p>
+                </div>
+            </div>
+        </form>
+        <span></span>
+        <button ng-disabled="f_go.$invalid" ng-click="f_login()" id="login">登录</button>
+
+    </div>
+</div>

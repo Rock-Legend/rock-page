@@ -1,0 +1,128 @@
+<!-- 职位搜索页 顶部搜索项使用公司搜索页的样式 列表页单独进行样式编写 -->
+    	<div class="companysearch-content1">
+    		<form name="myForm" class="companysearch-content1-main">
+    			<p>
+	    			<span class="content1-main-title">关&nbsp; 键&nbsp;词：</span>
+	    			<input class="content1-main-name" type="text" name="name" ng-model="name" ng-maxlength=38>&nbsp;&nbsp;
+	    			<span ng-show="myForm.name.$dirty && myForm.name.$invalid">
+		                <span ng-show="myForm.name.$error.maxlength">职位名最长可输入38个字</span>
+		            </span>	
+	    		</p>
+    			<p>
+	    			<span class="content1-main-title">所在地区：</span>
+	    			<input type="radio" id="radio-province-1" ng-model="province" name="province-choose" value="">
+	    			<label for="radio-province-1" class="choose">不限</label>
+	    			<input type="radio" id="radio-province-2" ng-model="province" name="province-choose" value="1">
+	    			<label for="radio-province-2" class="choose">北京</label>
+    			</p>
+    			<p>
+	    			<span class="content1-main-title">所属行业：</span>
+	    			<input type="radio" id="radio-industry-1" ng-model="industry" name="industry-choose" value="">
+	    			<label for="radio-industry-1" class="choose">不限</label>
+	    			<input type="radio" id="radio-industry-2" ng-model="industry" name="industry-choose" value="0">
+	    			<label for="radio-industry-2" class="choose">移动互联网</label>
+	    			<input type="radio" id="radio-industry-3" ng-model="industry" name="industry-choose" value="1">
+	    			<label for="radio-industry-3" class="choose">电子商务</label>
+	    			<input type="radio" id="radio-industry-4" ng-model="industry" name="industry-choose" value="2">
+	    			<label for="radio-industry-4" class="choose">企业服务</label>
+	    			<input type="radio" id="radio-industry-5" ng-model="industry" name="industry-choose" value="3">
+	    			<label for="radio-industry-5" class="choose">O2O</label>
+	    			<input type="radio" id="radio-industry-6" ng-model="industry" name="industry-choose" value="4">
+	    			<label for="radio-industry-6" class="choose">教育</label>
+	    			<input type="radio" id="radio-industry-7" ng-model="industry" name="industry-choose" value="5">
+	    			<label for="radio-industry-7" class="choose">金融</label>
+	    			<input type="radio" id="radio-industry-8" ng-model="industry" name="industry-choose" value="6">
+	    			<label for="radio-industry-8" class="choose">游戏</label>
+    			</p>
+    			<p>
+	    			<span class="content1-main-title">学历要求：</span>
+	    			<input type="radio" id="radio-education-1" ng-model="education" name="education-choose" value="">
+	    			<label for="radio-education-1" class="choose">不限</label>
+	    			<input type="radio" id="radio-education-2" ng-model="education" name="education-choose" value="0">
+	    			<label for="radio-education-2" class="choose">大专</label>
+	    			<input type="radio" id="radio-education-3" ng-model="education" name="education-choose" value="1">
+	    			<label for="radio-education-3" class="choose">本科</label>
+	    			<input type="radio" id="radio-education-4" ng-model="education" name="education-choose" value="2">
+	    			<label for="radio-education-4" class="choose">硕士</label>
+	    			<input type="radio" id="radio-education-5" ng-model="education" name="education-choose" value="3">
+	    			<label for="radio-education-5" class="choose">博士</label>
+	    		</p>
+	    		<p>
+	    			<span class="content1-main-title">工作经验：</span>
+	    			<input type="radio" id="radio-experience-1" ng-model="experience" name="experience-choose" value="">
+	    			<label for="radio-experience-1" class="choose">不限</label>
+	    			<input type="radio" id="radio-experience-2" ng-model="experience" name="experience-choose" value="0">
+	    			<label for="radio-experience-2" class="choose">应届</label>
+	    			<input type="radio" id="radio-experience-3" ng-model="experience" name="experience-choose" value="1">
+	    			<label for="radio-experience-3" class="choose">1-3年</label>
+	    			<input type="radio" id="radio-experience-4" ng-model="experience" name="experience-choose" value="2">
+	    			<label for="radio-experience-4" class="choose">3-5年</label>
+	    			<input type="radio" id="radio-experience-5" ng-model="experience" name="experience-choose" value="3">
+	    			<label for="radio-experience-5" class="choose">5-10年</label>
+	    			<input type="radio" id="radio-experience-6" ng-model="experience" name="experience-choose" value="4">
+	    			<label for="radio-experience-6" class="choose">10年以上</label>
+	    		</p>
+	    		<p>
+	    			<span class="content1-main-title">薪资水平：</span>
+	    			<input type="radio" id="radio-compensation-1" ng-model="compensation" name="compensation-choose" value="">
+	    			<label for="radio-compensation-1" class="choose">不限</label>
+	    			<input type="radio" id="radio-compensation-2" ng-model="compensation" name="compensation-choose" value="0">
+	    			<label for="radio-compensation-2" class="choose">8k以下</label>
+	    			<input type="radio" id="radio-compensation-3" ng-model="compensation" name="compensation-choose" value="1">
+	    			<label for="radio-compensation-3" class="choose">8k-15k</label>
+	    			<input type="radio" id="radio-compensation-4" ng-model="compensation" name="compensation-choose" value="2">
+	    			<label for="radio-compensation-4" class="choose">15k-26k</label>
+	    			<input type="radio" id="radio-compensation-5" ng-model="compensation" name="compensation-choose" value="3">
+	    			<label for="radio-compensation-5" class="choose">26k以上</label>
+	    		</p>
+	    		<p>
+	    			<span class="content1-main-title">发布时间：</span>
+	    			<input type="radio" id="radio-releasetime-1" ng-model="releaseAt" name="releasetime-choose" value="">
+	    			<label for="radio-releasetime-1" class="choose">不限</label>
+	    			<input type="radio" id="radio-releasetime-2" ng-model="releaseAt" name="releasetime-choose" value="0">
+	    			<label for="radio-releasetime-2" class="choose">今天</label>
+	    			<input type="radio" id="radio-releasetime-3" ng-model="releaseAt" name="releasetime-choose" value="1">
+	    			<label for="radio-releasetime-3" class="choose">三天内</label>
+	    			<input type="radio" id="radio-releasetime-4" ng-model="releaseAt" name="releasetime-choose" value="2">
+	    			<label for="radio-releasetime-4" class="choose">七天内</label>
+	    		</p>
+    			<div class="content1-main-switch">
+    				<button class="content1-main-recover" ng-click="reset()">清空</button>
+    				<button class="content1-main-go" ui-sref="search.searchJob({professionName:professionName, province:province, industry:industry, education:education, experience:experience, compensation:compensation, releaseAt:releaseAt, page:1, size:10})">搜索</button>
+    			</div>
+    		</form>
+    	</div>
+    	<!-- 列表页没有使用公司搜索页的样式，单独进行的编写，分页没有写，js时记得加上-->
+    	<div class="jobsearch-content2">
+    		<div class="row jobsearch-content2-list">
+    			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-repeat="j in vm.jSParams">
+    				<div class="content2-list-main">
+    					<div class="content2-list-main-part1">
+    						<h4 ui-sref="jobDetails({profId:j.professionId, comId:j.companyId})">{{j.professionName}} 
+	    						<span class="release-time">发布时间: 
+		    						<span ng-if="day === '0'">{{j.professionReleaseAt | date:'hh:mm:ss'}}</span>
+		    						<span ng-if="day == 1">{{j.professionReleaseAt | date:'三天内'}}</span>
+		    						<span ng-if="day == 2">{{j.professionReleaseAt | date:'yyyy-MM-dd'}}</span>
+		    						<span ng-if="day === undefined">{{j.professionReleaseAt | date:'yyyy-MM-dd'}}</span>
+	    						</span>
+    						</h4>
+    						<p class="pay">{{j.professionCompensation | compensation}}</p>
+    						<p class="request">北京-海淀区 <span ng-if="f.professionEducation !== ''">/ {{j.professionEducation| education}}</span> / {{j.professionExperience | experience}}经验</p>
+    					</div>
+    					<div class="content2-list-main-part2">
+	    					<div class="part2-1">
+	    						<p class="part2-1-p1" ui-sref="companyDetails.product({comId:j.companyId})">{{j.companyName}}</p>
+	    						<p class="part2-1-p2">{{j.companyIndustry | industry}}</p>
+	    						<button class="pag" disabled ng-if="f.companyTags">{{j.companyTags | tag}}</button>
+	    					</div>
+    						<div class="part2-2">
+    						  <img src="{{j.companyLogo}}" alt="公司logo">
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="jobsearch-content2-list-page">
+    				<pagination ng-if="vm.total" total={{vm.total}}></pagination>
+    			</div>
+    		</div>
+    	</div>

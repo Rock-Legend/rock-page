@@ -1,0 +1,19 @@
+<p class="f_backcap"><span>模块编辑</span></p>
+<div class="f_modify">
+    <label>名&emsp;&emsp;称<input class="f_rolename form-control" type="text" ng-model="vm.role.name"></label><br>
+    <ul class="f_roleul">
+        <label>权限</label>
+        <li class="f_newRole"><label> <input type="checkbox" name="roleAll">全选/全不选</label></li>
+        <li ng-repeat="x in vm.parent" class="f_newRole">
+            <label> <input type="checkbox" name="{{x.name}}" ng-model="ddd">{{x.name}} </label>
+            <div class="roleli">
+                <label ng-repeat="y in x.child">
+                    <!--{{vm.mid[y.id]}}{{y.id}}-->
+                    <input type="checkbox" name="{{x.name}}" ng-checked="vm.mid[y.id]">{{y.name}}
+                </label>
+            </div>
+        </li>
+    </ul>
+    <button class="btn btn-success" ng-click="vm.f_save()">保存</button>
+    <button class="btn" ui-sref="field.role">取消</button>
+</div>

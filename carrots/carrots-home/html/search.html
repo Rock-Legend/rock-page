@@ -1,0 +1,7 @@
+<!-- 搜索公司列表页 -->
+    	<div class="companysearch-nav">
+            <button class="companysearch-nav-but" ng-class="{navbarActive:$state.is('search.searchCompany')}" ui-sref="search.searchCompany({page:1,size:12})">公司</button>
+            <button class="companysearch-nav-but" ng-class="{navbarActive:$state.is('search.searchJob')}" ui-sref="search.searchJob({page:1,size:10})">职业</button>
+        </div>
+        <div ui-view></div>
+        

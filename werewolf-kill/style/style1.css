@@ -1,0 +1,202 @@
+body {
+  background-color: #f0f0f0;
+}
+.past {
+  width: 90%;
+  margin: .25rem auto;
+  padding: .35rem 0;
+  border: 1px solid #c9c9c9;
+  font-size: .34rem;
+  background-color: #fff;
+  color: #9a9a9a;
+  text-align: center;
+}
+.past img {
+  float: right;
+  position: relative;
+  right: .14rem;
+  width: .24rem;
+}
+.content {
+  width: 90%;
+  margin: 16px auto .6rem;
+  background: #fff;
+  border: 1px solid #9a9a9a;
+}
+.content .content-head {
+  padding: .26rem;
+  font-size: .38rem;
+  color: #fbb435;
+  text-align: center;
+  border-bottom: 2px solid #fdd793;
+}
+/* 主体部分轮播图样式开始*/
+.slider-wrapper {
+  display: block;
+  height: 7rem;
+  background: #FFF;
+  overflow: hidden;
+  position: relative;
+}
+.slider-wrapper input {
+  opacity: 0;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  -webkit-transition: transform 1600ms;
+  transition: transform 1600ms;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  z-index: 10;
+}
+.slider .item {
+  width: 80%;
+  margin: .28rem auto;
+  padding: .455rem 0;
+  font-size: .32rem;
+  font-family: "微软雅黑 light";
+  color: #fff;
+  background-color: #69d1e9;
+  border: 1px solid #d7f3f9;
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  transition-duration: 1s;
+}
+.slider .item:first-child {
+  cursor: pointer;
+}
+.slider .item a {
+  color: #fff;
+  text-decoration: none;
+}
+.slider .item a:hover,
+.slider .item a:active {
+  color: #fff;
+}
+.slider .prompt {
+  text-align: center;
+  font-size: .24rem;
+  color: #787878;
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  transition-duration: 1s;
+}
+/*不同页的位置和背景*/
+.slide1 {
+  left: 0;
+}
+.slide2 {
+  left: 100%;
+}
+.slide3 {
+  left: 200%;
+}
+.slide4 {
+  left: 300%;
+}
+/* Next and previous button 导航按钮样式*/
+.control {
+  position: absolute;
+  top: 35%;
+  width: .28rem;
+  height: .56rem;
+  z-index: 20;
+}
+.control img {
+  width: 100%;
+}
+.control label {
+  z-index: 0;
+  display: none;
+  text-align: center;
+  color: #FFF;
+  cursor: pointer;
+  opacity: 1;
+}
+.control label:hover {
+  opacity: 0.5;
+}
+.next {
+  right: 2%;
+}
+.previous {
+  left: 2%;
+}
+/* Slider pagination 滑动分页部分的样式 */
+.slider-pagination {
+  position: relative;
+  top: 65%;
+  display: inline-block;
+  width: 100%;
+  height: .2rem;
+  text-align: center;
+  z-index: 999;
+}
+.slider-pagination label {
+  width: .16rem;
+  height: .16rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 -4px;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+/* Slider control active css 滑动分页时导航按钮变化样式*/
+.slide-radio1:checked ~ .next .numb2,
+.slide-radio2:checked ~ .next .numb3,
+.slide-radio3:checked ~ .next .numb4,
+.slide-radio2:checked ~ .previous .numb1,
+.slide-radio3:checked ~ .previous .numb2,
+.slide-radio4:checked ~ .previous .numb3 {
+  display: block;
+  z-index: 1;
+}
+/* Slider pagination active css 滑动时分布按钮背景色变化样式*/
+.slide-radio1:checked ~ .slider-pagination .page1,
+.slide-radio2:checked ~ .slider-pagination .page2,
+.slide-radio3:checked ~ .slider-pagination .page3,
+.slide-radio4:checked ~ .slider-pagination .page4 {
+  background: #6dcddf;
+}
+/* css for sliding  effect when you click on control button 点击分布按钮触发滑动效果*/
+.slide-radio1:checked ~ .slider {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  transition-duration: 1s;
+}
+.slide-radio2:checked ~ .slider {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  transition-duration: 1s;
+}
+.slide-radio3:checked ~ .slider {
+  -webkit-transform: translateX(-200%);
+  transform: translateX(-200%);
+  transition-duration: 1s;
+}
+.slide-radio4:checked ~ .slider {
+  -webkit-transform: translateX(-300%);
+  transform: translateX(-300%);
+  transition-duration: 1s;
+}
+.slide-radio1:checked ~ .slide1 .item,
+.slide-radio2:checked ~ .slide2 .item,
+.slide-radio3:checked ~ .slide3 .item,
+.slide-radio4:checked ~ .slide4 .item,
+.slide-radio1:checked ~ .slide1 .prompt,
+.slide-radio2:checked ~ .slide2 .prompt,
+.slide-radio3:checked ~ .slide3 .prompt,
+.slide-radio4:checked ~ .slide4 .prompt {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  transition-duration: 1s;
+  opacity: 1;
+}
+/* 主体部分轮播图样式结束*/

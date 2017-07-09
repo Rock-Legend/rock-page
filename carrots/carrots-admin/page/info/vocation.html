@@ -1,0 +1,91 @@
+<div class="company">
+    <!--搜索块-->
+    <div class="f_comSearch">
+        <label>公司名称
+            <input class="form-control" ng-model="vm.searchParams.companyName"> </label> <label>职位名称
+        <input type="text" class="form-control" ng-model="vm.searchParams.name">
+
+    </label> <label>职业类别
+        <select class="form-control" ng-model="vm.searchParams.category">
+
+            <option value="" ng-selected="vm.searchParams.category==''||vm.searchParams.category==undefined" selected>全部</option>
+            <option value="1">产品类</option>
+            <option value="2">技术类</option>
+            <option value="3">设计类</option>
+        </select>
+    </label> <label>学历要求
+        <select class="form-control" ng-model="vm.searchParams.education">
+        <option value="" ng-selected="vm.searchParams.education==''||vm.searchParams.education==undefined" selected>全部</option>
+        <option value="0">大专</option>
+        <option value="1">本科</option>
+        <option value="2">硕士</option>
+        <option value="3">博士及以上</option>
+    </select></label> <label>工作经验
+        <select class="form-control" ng-model="vm.searchParams.experience">
+            <option value="" ng-selected="vm.searchParams.experience==''||vm.searchParams.experience==undefined" selected>全部</option>
+            <option value="0">应届</option>
+            <option value="1">1~2年</option>
+            <option value="2">3~5年</option>
+            <option value="3">6~9年</option>
+            <option value="3">10年及以上</option>
+        </select>
+    </label> 
+    <label>发布时间
+        <input type="text" ui-date="dateOptions" class="form-control f_city" ng-model="vm.searchParams.startAt">—<input type="text" ui-date="dateOptions" class="form-control f_city" ng-model="vm.searchParams.endAt">
+    </label> <label>薪&emsp;&emsp;资
+        <select class="form-control" ng-model="vm.searchParams.compensation">
+
+            <option value="" ng-selected="vm.searchParams.compensation==''||vm.searchParams.compensation==undefined" selected>全部</option>
+            <option value="0">8K</option>
+            <option value="1">8~15K</option>
+            <option value="2">16~25K</option>
+            <option value="3">26K及以上</option>
+        </select>
+    </label> <label> 状&emsp;&emsp;态
+        <select class="form-control" ng-model="vm.searchParams.status">
+
+            <option value="" ng-selected="vm.searchParams.status==''||vm.searchParams.status==undefined" selected>全部</option>
+            <option value="0">下架</option>
+            <option value="1">上架</option>
+        </select>
+    </label>
+        <div class="f_searchbtn pull-right">
+            <button class="btn btn-warning" ng-click="vm.f_clear()">清空</button>
+            <button class="btn btn-success" ng-click="vm.f_search()">搜索</button>
+
+        </div>
+    </div>
+    <p class="f_comcap"><span><span ng-if="vm.name !== undefined">{{vm.name}}</span>职位列表</span><button ng-if="vm.name !== undefined" class="btn btn-success" ui-sref="field.newVoca({Cid:vm.Cid})">+新增</button></p>
+    <div class="f_comlist">
+        <table class="table">
+            <tr>
+                <td>序号</td>
+                <td>公司名称</td>
+                <td>职位名称</td>
+                <td>薪资</td>
+                <td>学历要求</td>
+                <td>工作经验</td>
+                <td>发布时间</td>
+                <td>状态</td>
+                <td>操作</td>
+            </tr>
+            <tr ng-repeat="x in vm.infos">
+                <td>{{x.id}}</td>
+                <td>{{x.companyName}}</td>
+                <td>{{x.name}}</td>
+                <td>{{x.compensation | f_compensation}}</td>
+                <td>{{x.education | f_education}}</td>
+                <td>{{x.experience | f_experience}}</td>
+                <td>{{x.releaseAt | date:"yyyy-MM-dd HH:mm:ss"}}</td>
+                <td>{{x.status | f_vocaStatus}}</td>
+                <td>
+                    <button ng-if="x.status == '1'" ng-click="vm.f_putaway($index)" class="btn btn-primary">上架</button>
+                    <button ng-if="x.status == '0'" ng-click="vm.f_unputaway($index)" class="btn btn-warning">下架</button>
+                    <button class="btn btn-success" ui-sref="field.newVoca({id:vm.infos[$index].id,Cid:vm.infos[$index].companyId})">编辑</button>
+                    <button class="btn btn-danger" ng-click="vm.f_delete($index)">删除</button>
+                </td>
+            </tr>
+        </table>
+        <pagination ng-if="vm.total" total="{{vm.total}}"></pagination>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+<div class="company">
+    <!--搜索块-->
+    <div class="f_comSearch">
+        <label>公司名称
+            <input class="form-control" ng-model="vm.searchParams.name"> </label> <label>公司行业
+        <select class="form-control" ng-model="vm.searchParams.industry">
+            <option value="" ng-selected="vm.searchParams.industry==''||vm.searchParams.industry==undefined" selected>全部</option>
+            <option value="0">互联网</option>
+            <option value="1">电子商务</option>
+            <option value="2">企业服务</option>
+            <option value="3">O2O</option>
+            <option value="4">教育</option>
+            <option value="5">金融</option>
+            <option value="6">游戏</option>
+        </select>
+    </label>
+        <label>地&emsp;&emsp;区
+        <select ng-model="vm.searchParams.province" class="form-control f_city" ng-change="vm.toCity()">
+            <option value="">全部</option>
+            <option ng-repeat="x in vm.province" value="{{x.ProID}}">{{x.ProName}}</option>
+        </select>—<select class="form-control f_city" ng-model="vm.searchParams.city">
+            <option value="">全部</option>
+            <option ng-repeat="x in vm.city" value="{{x.CityID}}">{{x.CityName}}</option>
+        </select>
+    </label> <label>产品名称
+        <input class="form-control" ng-model="vm.searchParams.productName"></label> <label>融资规模
+        <select class="form-control" ng-model="vm.searchParams.finacing">
+            <option value="" ng-selected="vm.company.finacing==''||vm.company.finacing==undefined" selected>全部</option>
+            <option value="0">无需融资</option>
+            <option value="1">天使轮</option>
+            <option value="2">A轮</option>
+            <option value="3">B轮</option>
+            <option value="4">BC轮</option>
+            <option value="5">D轮及以上</option>
+            <option value="6">上市公司</option>
+        </select>
+    </label> <label>认证状态
+        <select class="form-control" ng-model="vm.searchParams.approved">
+
+            <option value="" ng-selected="vm.searchParams.approved==''||vm.searchParams.approved==undefined" selected>全部</option>
+            <option value="0">未认证</option>
+            <option value="1">已认证</option>
+        </select>
+    </label> <label>冻结状态
+        <select class="form-control" ng-model="vm.searchParams.freezed">
+            <option value="" ng-selected="vm.searchParams.freezed==''||vm.searchParams.freezed==undefined" selected>全部</option>
+            <option value="0">正常</option>
+            <option value="1">冻结</option>
+        </select>
+    </label>
+        <div class="f_searchbtn pull-right">
+            <button class="btn btn-warning" ng-click="vm.f_clear()">清空</button>
+            <button class="btn btn-success" ng-click="vm.f_search()">搜索</button>
+        </div>
+    </div>
+    <p class="f_comcap"><span>公司列表</span><button class="btn btn-success" ui-sref="field.newCompany">+新增</button></p>
+    <div class="f_comlist">
+        <table class="table">
+            <tr>
+                <td class="f_comtd1">序号</td>
+                <td class="f_comtd2">公司名称</td>
+                <td class="f_comtd3">公司行业</td>
+                <td class="f_comtd4">地区</td>
+                <td class="f_comtd5">融资规模</td>
+                <td class="f_comtd6">认证状态</td>
+                <td class="f_comtd7">冻结状态</td>
+                <td class="f_comtd9">操作</td>
+            </tr>
+            <tr ng-repeat="x in vm.infos">
+                <td>{{$index+1}}</td>
+                <td>{{x.name}}</td>
+                <td>{{x.industry | f_company}}</td>
+                <td>{{x.province | f_province}}—{{x.city | f_city}}</td>
+                <td>{{x.finacing | f_financing}}</td>
+                <td>{{x.approved | f_approved}}</td>
+                <td>{{x.freezed | f_freezed}}</td>
+                <td>
+                    <a class="btn btn-info" ui-sref="field.professionList({Cname:vm.infos[$index].name,Cid:vm.infos[$index].id})">职位</a>
+                    <a class="btn btn-warning" ng-if="x.approved == '1'" ng-click="vm.f_unapproved($index)">解除</a>
+                    <a class="btn btn-primary" ng-if="x.approved == '0'" ng-click="vm.f_approved($index)">认证</a>
+                    <a class="btn btn-success" ui-sref="field.newCompany({id:vm.infos[$index].id,page:vm.searchParams.page})">编辑</a>
+                    <a class="btn btn-warning" ng-if="x.freezed == '0'" ng-click="vm.f_freezed($index)">冻结</a>
+                    <a class="btn btn-primary" ng-if="x.freezed == '1'" ng-click="vm.f_unfreezed($index)">解冻</a>
+                    <a class="btn btn-danger" ng-click="vm.f_delete($index)">删除</a>
+                </td>
+            </tr>
+        </table>
+        <pagination ng-if="vm.total" total="{{vm.total}}"></pagination>
+
+    </div>
+</div>

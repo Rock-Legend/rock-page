@@ -1,0 +1,70 @@
+
+<p class="f_backcap">
+    <span>{{vm.voca.companyName}}职位详情</span><select class="form-control f_selectcap" ng-model="vm.voca.recommend">
+    <option value="0">普通</option>
+    <option value="1">推荐</option></select>
+</p>
+<form class="f_adds">
+    <label>
+        职位名称
+        <input ng-model="vm.voca.name" class="form-control" type="text" required></label>
+    <label>
+        公司名称
+        <input ng-model="vm.voca.companyName" class="form-control" type="text" disabled></label>
+    <label>
+        工作经验
+        <select ng-model="vm.voca.experience" class="form-control">
+        <option value="0">应届</option>
+        <option value="1">1~2年</option>
+        <option value="2">3~5年</option>
+        <option value="3">6~9年</option>
+        <option value="3">10年及以上</option>
+        </select></label>
+    <label>
+        学历要求
+        <select ng-model="vm.voca.education" class="form-control">
+            <option value="0">大专</option>
+            <option value="1">本科</option>
+            <option value="2">硕士</option>
+            <option value="3">博士及以上</option>
+        </select>
+    </label>
+    <label>
+        薪&emsp;&emsp;资
+        <select ng-model="vm.voca.compensation" class="form-control">
+            <!--<option value="" ng-selected="vm.voca.compensation=='0'||vm.voca.compensation==undefined" selected>请选择</option>-->
+            <option value="0">0~8K</option>
+            <option value="1">8~15K</option>
+            <option value="2">16~25K</option>
+            <option value="3">26K及以上</option>
+        </select>
+    </label>
+    <label>
+        职业类别
+        <select ng-model="vm.voca.category" class="form-control">
+
+            <option value="1">产品类</option>
+            <option value="2">技术类</option>
+            <option value="3">设计类</option>
+        </select>
+    </label><br>
+    <label>
+        职位标签
+    </label><br>
+    <!--<span ng-click="vm.f_deleteTag($index)" class="btn btn-info f_tag" ng-repeat="x in vm.voca.companyTagList track by $index">{{x.tag}}</span>-->
+    <label ng-repeat="x in vm.voca.companyTagList track by $index">
+        <input type="checkbox" ng-checked="x|inTag:vm.voca.professionTagList">{{x.tag}}{{x.id}}{{vm.voca.professionTagList[x]}}</label>
+    <!--<label ng-repeat="x in vm.voca.companyTagList track by $index"><input type="checkbox" ng-model="vm.tags[$index]" ng-checked="vm.voca.professionTagList[x.tag]">{{x.tag}}{{x.id}}{{vm.voca.professionTagList[x]}}</label>-->
+    <p class="f_backcap">
+        <span>职位描述</span>
+    </p>
+    <div class="f_adds">
+        <label>岗位职责<textarea ng-model="vm.voca.responsibility" class="f_textarea" required></textarea></label><br>
+        <label>必备条件<textarea ng-model="vm.voca.requisite" class="f_textarea" required></textarea></label><br>
+        <label>公司福利<textarea ng-model="vm.voca.boon" class="f_textarea" required></textarea></label>
+
+    </div>
+    <button type="submit" class="btn btn-success" ng-click="vm.f_save()">保存</button>
+    <button type="submit" class="btn btn-success" ng-click="vm.test()">test</button>
+    <button class="btn" ui-sref="field.professionList">取消</button>
+</form>

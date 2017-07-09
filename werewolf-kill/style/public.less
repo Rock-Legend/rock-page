@@ -1,0 +1,77 @@
+@charset:utf-8;
+@import "common";
+@maxw:640px;
+@minw:310px;
+@maxh:1136px;
+@headh:.88rem;
+@ffy:"微软雅黑 light";
+@bgc:#f0f0f0;
+@headbgc:#29bde0;
+@headbdc:#74d4eb;
+@mainbgc:#f0f0f0;
+@mainbdc:#ddd;
+body {
+	max-width: @maxw;
+	min-width: @minw;
+	width: 100%;
+	max-height: @maxh;
+	margin: auto;
+	font-family: @ffy;
+	background-color: @mainbgc;
+}
+.result-page{
+	background-color:@headbgc;
+}
+header {
+	.fix(top);
+	max-width: @maxw;
+	min-width: @minw;
+	width: 100%;
+	height: @headh;
+	line-height: @headh;
+	background-color: @headbgc;
+	color:#fff;
+	border-bottom: 1px solid @headbdc;
+	text-align: center;
+	font-size: .34rem;
+	@w:12%;
+	.part1{
+		.fl();
+		.pos(relative);
+		width: @w;
+		height: inherit;
+		a{
+			display: inline-block;
+			width: 100%;
+			height: inherit;
+		}
+		img {.posn(vc);
+			width: 42%;
+		}
+	}
+	.part2{
+		.fr();
+		.pos(relative);
+		width: @w;
+		height: inherit;
+		a{
+			display: inline-block;
+			width: 100%;
+			height: inherit;
+		}
+		img{.posn(vc);
+			width: 50%;
+		}
+	}	
+}
+.headercopy {height: @headh;}
+
+@media screen and (min-width: 640px) {
+  html {font-size: 625%;}
+}
+@media screen and (max-width: 640px) {
+  html {font-size: 470%;}
+}
+@media screen and (max-width: 500px) {
+  html {font-size: 312.5%;}
+}

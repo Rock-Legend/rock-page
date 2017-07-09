@@ -1,0 +1,121 @@
+@charset:"utf-8";
+@import "common";
+@maxw:640px;
+@minw:310px;
+@headbgc:#29bde0;
+@ffy:"微软雅黑 light";
+div{box-sizing: border-box;}
+.content{
+	width: 96%;
+	margin: .2rem auto 0;
+	.part1{
+		width: 100%;
+		background-color: #fff;
+		// font-size: 0;
+		.clearfix();
+		@partbdc:#d9d9d9;
+		.sidetitle{
+			display: inline-block;
+			width: 19%;
+			height: 3.88rem;
+			padding: 1.1rem .4rem 0; 
+			text-align: center;
+			font-size: .36rem;
+			border-right: 1px solid @partbdc;
+		}
+		.main{
+			.fr();
+			width: 81%;
+			height: 3.9rem;
+			background-color: #fbfbfb;
+			// border-bottom: 1px solid @partbdc;
+		}
+		.set{
+			.fr();
+			width: 81%;
+			margin-top:-.62rem;
+			padding: .14rem 0;
+			text-align: center;
+			font-size: .28rem;
+			color: @headbgc;
+			background-color: #fbfbfb;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			img{width: .14rem;}
+		}
+	}
+	.part2{
+		margin-top: .09rem;
+		padding-bottom: .29rem;
+		font-size: .28rem;
+		color: #d7d7d7;
+		background-color: #fff;
+		div{
+			margin:0 .28rem;
+			padding-top: .26rem;
+            padding-bottom: .22rem;
+			border-bottom: 1px solid #f0f0f0;
+			input{
+				margin-left: .2rem;
+				width: 50%;
+				font-size: .28rem;
+				border: none;
+			}
+		}
+	}
+	.part3{
+		margin-top: .09rem;
+		padding-top: .2rem;
+		font-size: .28rem;
+		background-color: #fff;
+		p{
+			margin:0 ;
+			margin-left: .28rem;
+			padding-bottom: .45rem;
+			input {
+				width: .4rem;
+				text-align: center;
+				font-size: .28rem;
+				background-color: #f4f5f5;
+				border:none;
+			}
+			span{color: #f90;font-size: .2rem;}
+		}
+	}
+}
+ul {
+	.fl();
+	width: 42%;
+	padding: .4rem 0 .4rem .32rem;
+	font-size: 0;
+    list-style-position: inside;
+	li{
+		word-spacing: .16rem;
+		margin: .4rem 0 .4rem 0;
+		font-size: .26rem;
+		// list-style-position: outside;
+		list-style-image: url(../images/square1.png);
+		label{display: inline-block;width: .3rem;}
+		input{
+			width: .4rem;
+			text-align: center;
+			font-size: .28rem;
+			background-color: transparent;
+			border: none;
+			outline: none;
+		}
+	}
+}
+footer{
+	button{
+		width: 90%;
+		margin: 0 .31rem .1rem;
+		padding: .25rem;
+		border: none;
+		font-size: .4rem;
+		font-family: @ffy;
+		color: #fff;
+		background-color: #fab344;
+	}
+}

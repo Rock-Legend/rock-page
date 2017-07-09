@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/**
+ * @authors Rock Legend
+ * @date    2017-04-09 14:30:37
+ */
+@import "common";
+@maxw:640px;
+@minw:310px;
+@maxh:1136px;
+@ffy:"微软雅黑 light";
+@bgc:#f0f0f0;
+@headbgc:#29bde0;
+@headbdc:#74d4eb;
+@contentbgc:#f7f7f7;
+.content{
+	margin: .35rem auto 0;
+	width: 96%;
+	font-size: 0;
+	background-color: @contentbgc;
+    border:1px solid #c9c9c9;
+    .content-head{
+    	.pos(relative);
+    	height: .85rem;
+		line-height: .85rem;
+    	text-align: center;
+    	font-size: .3rem;
+    	color: @headbgc;
+    	border-bottom: 1px solid #c9c9c9;
+    	a{
+			.pos(absolute);
+			right: .2rem;
+			display: inline-block;
+			width: .4rem;
+			height: .85rem;
+			img{width: 80%;}
+		}
+    }
+    .triangle1{
+		display: inline-block;
+		width: 0;
+		height: 0;
+		margin-left: .29rem;
+		vertical-align: middle;
+		border-top: .1rem solid #c9c9c9;
+		border-right: .1rem solid transparent;
+	    border-left: .1rem solid transparent;
+	}
+    .content-main{
+    	position: relative;
+    	.circle{
+			position: absolute;
+			top: .52rem;
+			left: .06rem;
+    		width: .56rem;
+    		height: .56rem;
+    		background-color: @contentbgc;
+    		border: 2px solid #c9c9c9;
+    		.border-radius(50%);
+    		img{
+    			position: relative;
+    			top:22%;
+    			left:24%;
+    			width: .29rem;
+    		}
+    	}	
+    }
+
+}
+.content-part{
+	margin-top: -1px;
+	margin-left: .38rem;
+	padding-top: .36rem;
+	text-align: center;
+	border-left: 2px solid #c9c9c9;
+	.content-part-main{
+		margin-top: .12rem;
+		width: 82%;
+		height: .72rem;
+		line-height: .72rem;
+		color: #fff;
+		background-color: #24a7c6;
+		border:none;
+		font-size: .3rem;
+		font-family: @ffy;
+		letter-spacing: 1px;
+		cursor: pointer;
+		&:last-child{
+			margin-bottom: .12rem;
+		}
+	}
+	.triangle2{
+		display: inline-block;
+		width: 0;
+		height: 0;
+		margin-top: -.2rem;
+		margin-left: -1px;
+		vertical-align: middle;
+		border-right: .2rem solid #24a7c6;
+		border-top: .16rem solid transparent;
+	    border-bottom: .16rem solid transparent;
+	}
+}
+.mar {
+	margin-bottom: .8rem;
+}
+p {
+	margin-top:5px; 
+	margin-bottom:0;
+	font-size:.2rem;
+}

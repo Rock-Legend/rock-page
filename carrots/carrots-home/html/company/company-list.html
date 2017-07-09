@@ -1,0 +1,81 @@
+        <!-- 公司列表页 -->
+        <div class="companylist-content1">
+    		<img class="companylist-content1-img" src="images/companylist-1.png">
+    	</div>
+    	<div class="companylist-content2">
+            <p>
+                <span class="content2-nav-header"><b>公司地点：</b></span>
+                <input type="radio" id="radio-province-1" ng-model="province" name="province-choose" value="">
+                <label for="radio-province-1" class="choose">不限</label>
+                <input type="radio" id="radio-province-2" ng-model="province" name="province-choose" value="1">
+                <label for="radio-province-2" class="choose">北京</label>
+            </p>
+            <p>
+                <span><b>融资规模：</b></span>
+                <input type="radio" id="radio-financing-1" ng-model="financing" name="financing-choose" value="">
+                <label for="radio-financing-1" class="choose">不限</label>
+                <input type="radio" id="radio-financing-2" ng-model="financing" name="financing-choose" value="1">
+                <label for="radio-financing-2" class="choose">天使轮</label>
+                <input type="radio" id="radio-financing-3" ng-model="financing" name="financing-choose" value="2">
+                <label for="radio-financing-3" class="choose">A轮</label>
+                <input type="radio" id="radio-financing-4" ng-model="financing" name="financing-choose" value="3">
+                <label for="radio-financing-4" class="choose">B轮</label>
+                <input type="radio" id="radio-financing-5" ng-model="financing" name="financing-choose" value="4">
+                <label for="radio-financing-5" class="choose">C轮</label>
+                <input type="radio" id="radio-financing-6" ng-model="financing" name="financing-choose" value="5">
+                <label for="radio-financing-6" class="choose">D轮及以上</label>
+                <input type="radio" id="radio-financing-7" ng-model="financing" name="financing-choose" value="6">
+                <label for="radio-financing-7" class="choose">上市公司</label>
+                <input type="radio" id="radio-financing-8" ng-model="financing" name="financing-choose" value="0">
+                <label for="radio-financing-8" class="choose">无需融资</label>
+            </p>
+            <p>
+                <span><b>行业领域：</b></span>
+                <input type="radio" id="radio-industry-1" ng-model="industry" name="industry-choose" value="">
+                <label for="radio-industry-1" class="choose">不限</label>
+                <input type="radio" id="radio-industry-2" ng-model="industry" name="industry-choose" value="0">
+                <label for="radio-industry-2" class="choose">移动互联网</label>
+                <input type="radio" id="radio-industry-3" ng-model="industry" name="industry-choose" value="1">
+                <label for="radio-industry-3" class="choose">电子商务</label>
+                <input type="radio" id="radio-industry-4" ng-model="industry" name="industry-choose" value="2">
+                <label for="radio-industry-4" class="choose">企业服务</label>
+                <input type="radio" id="radio-industry-5" ng-model="industry" name="industry-choose" value="3">
+                <label for="radio-industry-5" class="choose">O2O</label>
+                <input type="radio" id="radio-industry-6" ng-model="industry" name="industry-choose" value="4">
+                <label for="radio-industry-6" class="choose">教育</label>
+                <input type="radio" id="radio-industry-7" ng-model="industry" name="industry-choose" value="5">
+                <label for="radio-industry-7" class="choose">金融</label>
+                <input type="radio" id="radio-industry-8" ng-model="industry" name="industry-choose" value="6">
+                <label for="radio-industry-8" class="choose">游戏</label>
+            </p>
+    	</div>
+        <div class="companylist-content3">
+    		<div class="col-sm-4 col-md-4 col-lg-4" ng-repeat="c in vm.cLParams">
+    			<div class="content3-item">
+    				<div class="content3-item-logo" ui-sref="companyDetails.product({comId:c.id})">
+    					<img src="{{c.logo}}" alt="公司logo">
+    				</div>
+    				<div class="content3-item-caption">
+						<h4 class="content3-item-caption-top" ui-sref="companyDetails.product({comId:c.id})">{{c.name}}</h4>
+						<p>{{c.slogan}}</p>
+						<p><span class="content3-item-caption-hint">{{c.totalNum}}</span>个在招职位</p>
+    				</div>
+    				<div class="content3-item-genre">
+						<div class="content3-item-genre-part1">
+							<i class="iconfont icon-yidonghulianwang-copy"></i> {{c.industry | industry}}
+						</div>
+						<div class="content3-item-genre-part2">
+							<i class="iconfont icon-shangshigongsi"></i> {{c.finacing | financing}}
+						</div>
+						<div class="content3-item-genre-part3">
+							<span ng-if="c.province !== ''">
+                                <i class="iconfont icon-llcouponsupportedshopaddress"></i> {{c.province | province}}
+                            </span>
+						</div>
+					</div>
+    			</div>					
+    		</div>
+            <div class="content3-page">
+                <pagination ng-if="vm.total" total={{vm.total}}></pagination>
+            </div>
+        </div>

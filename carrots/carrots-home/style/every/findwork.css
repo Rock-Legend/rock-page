@@ -1,0 +1,529 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors gaoxuefeng
+ * @date    2017-05-26 16:01:44
+ * @version $Id$
+ */
+/*找职位页样式集合*/
+/* 去掉原生轮播两侧导航的渐变阴影 */
+.findwork-content1 {
+  position: relative;
+  margin: 0 auto .18rem;
+  padding: .2rem 0 0;
+  max-width: 1200px;
+  min-width: 800px;
+  font-size: 0;
+  /* 轮播图部分样式 */
+}
+.findwork-content1 .findwork-content1-sidebar {
+  display: inline-block;
+  width: 19.75%;
+  color: #fff;
+}
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar1:hover div,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar1:active div {
+  color: #fc2a48;
+  background-color: #fff;
+}
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar1:hover div a,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar1:active div a {
+  color: #fc2a48;
+}
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar1:hover ul,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar1:active ul {
+  display: block;
+}
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar11,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar12,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar13 {
+  height: 1.5rem;
+  padding-top: .18rem;
+  background-color: #f43851;
+  overflow: hidden;
+}
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar11 .findwork-content1-sidebar1-h41,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar12 .findwork-content1-sidebar1-h41,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar13 .findwork-content1-sidebar1-h41,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar11 .findwork-content1-sidebar1-h42,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar12 .findwork-content1-sidebar1-h42,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar13 .findwork-content1-sidebar1-h42 {
+  margin-top: 0;
+  padding-left: .2rem;
+  padding-right: .28rem;
+  font-size: .18rem;
+}
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar11 .findwork-content1-sidebar1-h41,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar12 .findwork-content1-sidebar1-h41,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar13 .findwork-content1-sidebar1-h41 {
+  margin-bottom: .12rem;
+}
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar11 .findwork-content1-sidebar1-h42,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar12 .findwork-content1-sidebar1-h42,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar13 .findwork-content1-sidebar1-h42 {
+  margin-bottom: .28rem;
+}
+@media screen and (max-width: 978px) {
+  .findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar11 .findwork-content1-sidebar1-h41,
+  .findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar12 .findwork-content1-sidebar1-h41,
+  .findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar13 .findwork-content1-sidebar1-h41 {
+    margin-bottom: .09rem;
+  }
+  .findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar11 .findwork-content1-sidebar1-h42,
+  .findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar12 .findwork-content1-sidebar1-h42,
+  .findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar13 .findwork-content1-sidebar1-h42 {
+    margin-bottom: .21rem;
+  }
+}
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar11 .findwork-content1-sidebar1-way,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar12 .findwork-content1-sidebar1-way,
+.findwork-content1 .findwork-content1-sidebar .findwork-content1-sidebar13 .findwork-content1-sidebar1-way {
+  float: right;
+}
+.findwork-content1 .findwork-content1-topbanner {
+  display: inline-block;
+  /* 非全宽分配 */
+  width: 78.25%;
+  height: 4.5rem;
+  overflow: hidden;
+}
+.findwork-content1 .findwork-content1-topbanner .carousel-inner-diy3 {
+  cursor: pointer;
+}
+.findwork-content1 .findwork-content1-topbanner .carousel-inner-diy3 img {
+  width: 100%;
+  height: 4.5rem;
+}
+.carousel-indicators-diy3 .active {
+  width: .15rem;
+  height: .15rem;
+  margin-right: .14rem;
+  background: #fff;
+}
+.carousel-indicators-diy3 li {
+  width: .13rem;
+  height: .13rem;
+  margin-right: .13rem;
+  border: 1px solid #fff;
+}
+/* 左右侧导航按钮位置调整 */
+.chevron-left {
+  position: relative;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+.chevron-right {
+  position: relative;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+/* 侧边导航栏文字部分样式 */
+.findwork-content1-sidebar1-nav {
+  margin-bottom: 0;
+  padding-left: .2rem;
+  list-style: none;
+  font-size: .14rem;
+}
+.findwork-content1-sidebar1-nav a {
+  display: inline-block;
+  padding-right: .18rem;
+  padding-bottom: .16rem;
+  color: #fff;
+}
+@media screen and (max-width: 978px) {
+  .findwork-content1-sidebar1-nav a {
+    padding-right: .09rem;
+    padding-bottom: .08rem;
+  }
+}
+/* 侧边栏子列表显示样式 */
+.findwork-content1-sidebar-child {
+  margin: 0;
+  padding: .18rem .4rem;
+  width: 60%;
+  min-height: 1.5rem;
+  font-size: .16rem;
+  list-style: none;
+  color: #fc2a48;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-left: none;
+}
+.findwork-content1-sidebar-child li {
+  margin-bottom: .16rem;
+}
+.findwork-content1-sidebar-child li a {
+  padding-right: .16rem;
+  color: #fc2a48;
+}
+.findwork-content1-sidebar-child1,
+.findwork-content1-sidebar-child2,
+.findwork-content1-sidebar-child3 {
+  display: none;
+  position: absolute;
+  left: 19.75%;
+  z-index: 100;
+}
+.findwork-content1-sidebar-child1 {
+  top: .2rem;
+}
+.findwork-content1-sidebar-child2 {
+  top: 1.7rem;
+}
+.findwork-content1-sidebar-child3 {
+  top: 3.2rem;
+}
+/* 顶部搜索框样式 */
+.findwork-content1-search {
+  position: absolute;
+  right: 11.7%;
+  left: 30%;
+  top: .4rem;
+  z-index: 5;
+}
+.findwork-content1-search .findwork-content1-search-out {
+  padding: .14rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+/* 搜索按钮样式修改 */
+.btn-diy1 {
+  padding: .11rem .31rem;
+  font-size: .16rem;
+  background-color: #fc2a48;
+}
+/* 搜索框样式修改 */
+.form-control-diy1 {
+  position: relative;
+  padding: .22rem .12rem .23rem;
+  border-left: none;
+  background-color: #fff;
+}
+.form-control-diy1 .form-control-diy1-input {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  bottom: 30%;
+  padding-left: .14rem;
+  width: 100%;
+  border: none;
+  font-size: .14rem;
+  color: #536a82;
+  border-left: 2px solid #f0f0f0;
+  outline-style: none;
+}
+/* 提示框样式修改 */
+.input-group-addon-diy1 {
+  color: #2d3e50;
+  font-size: .16rem;
+  background-color: #fff;
+  border-right: none;
+  outline-style: none;
+}
+/* 找职位第二部分 最新职位和推荐职位 */
+.findwork-content2,
+.findwork-content3,
+.findwork-content4,
+.findwork-content5 {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 800px;
+}
+/* 最新职位和推荐职位展示内容样式 */
+.findwork-content2-caption {
+  margin: .18rem .2rem .08rem;
+  color: #2d3e50;
+  font-size: .14rem;
+}
+.findwork-content2-caption .findwork-content2-caption-a1,
+.findwork-content2-caption .findwork-content2-caption-a2 {
+  text-decoration: none;
+  color: #2d3e50;
+}
+.findwork-content2-caption .findwork-content2-caption-a1 {
+  font-size: .16rem;
+  font-weight: bold;
+}
+.findwork-content2-caption .findwork-content2-caption-more {
+  float: right;
+  font-size: .16rem;
+  cursor: pointer;
+}
+.findwork-content2-cont {
+  margin: 0;
+  padding: .29rem .2rem .46rem;
+  background-color: #fff;
+}
+.findwork-content2-cont .findwork-content2-cont1 {
+  margin-bottom: .2rem;
+  height: 1.3rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.findwork-content2-cont .findwork-content2-cont1:hover {
+  box-shadow: 0 0 5px #ddd;
+}
+.findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-logo {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .09rem .1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+}
+.findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-logo img {
+  width: 90%;
+}
+.findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-job {
+  float: left;
+  font-size: .14rem;
+}
+.findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-job .findwork-content2-cont-job1 {
+  margin-top: .24rem;
+  color: #fc2b47;
+}
+.findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-job .findwork-content2-cont-job2 {
+  cursor: pointer;
+}
+.findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-job .findwork-content2-cont-job3 {
+  cursor: pointer;
+}
+.findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-job .findwork-content2-cont-job1,
+.findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-job .findwork-content2-cont-job2 {
+  font-weight: bold;
+}
+.findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-job .findwork-content2-cont-job1,
+.findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-job .findwork-content2-cont-job2,
+.findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-job .findwork-content2-cont-job3 {
+  margin-left: .18rem;
+  width: 86px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 980px) {
+  .findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-job .findwork-content2-cont-job1,
+  .findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-job .findwork-content2-cont-job2,
+  .findwork-content2-cont .findwork-content2-cont1 .findwork-content2-cont-job .findwork-content2-cont-job3 {
+    margin-left: 0;
+    width: 46px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+/* 找职位第三部分 推荐公司样式 标题使用第二部分的样式不再编写 */
+.findwork-content3-cont {
+  margin: 0;
+  padding: .36rem .2rem .46rem;
+  color: #536a82;
+  background-color: #fff;
+}
+.findwork-content3-cont .findwork-content3-cont1 {
+  position: relative;
+  margin-bottom: .32rem;
+  height: 2.15rem;
+  color: #fff;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.findwork-content3-cont .findwork-content3-cont1:hover {
+  box-shadow: 0 0 5px #ccc;
+}
+.findwork-content3-cont .findwork-content3-cont1 .content3-cont1-com {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: .38rem;
+  margin-left: .36rem;
+  overflow: hidden;
+}
+.findwork-content3-cont .findwork-content3-cont1 .content3-cont1-com h4 {
+  font-size: .16rem;
+  cursor: pointer;
+}
+.findwork-content3-cont .findwork-content3-cont1 .content3-cont1-com p {
+  font-size: .14rem;
+}
+.findwork-content3-cont .findwork-content3-cont1 .content3-cont1-genre {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 0;
+  overflow: hidden;
+}
+.findwork-content3-cont .findwork-content3-cont1 .content3-cont1-genre .content3-cont1-genre-part1 {
+  width: 40%;
+}
+.findwork-content3-cont .findwork-content3-cont1 .content3-cont1-genre .content3-cont1-genre-part2 {
+  width: 30%;
+}
+.findwork-content3-cont .findwork-content3-cont1 .content3-cont1-genre .content3-cont1-genre-part3 {
+  width: 30%;
+}
+.findwork-content3-cont .findwork-content3-cont1 .content3-cont1-genre .content3-cont1-genre-part1,
+.findwork-content3-cont .findwork-content3-cont1 .content3-cont1-genre .content3-cont1-genre-part2,
+.findwork-content3-cont .findwork-content3-cont1 .content3-cont1-genre .content3-cont1-genre-part3 {
+  display: inline-block;
+  padding-bottom: .16rem;
+  text-align: center;
+  font-size: .14rem;
+}
+.findwork-content3-cont .findwork-content3-cont2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: .16rem;
+  height: 1rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.findwork-content3-cont .findwork-content3-cont2:hover {
+  box-shadow: 0 0 5px #ccc;
+}
+.findwork-content3-cont .findwork-content3-cont2 img {
+  height: 98%;
+}
+.findwork-content3-cont .findwork-content3-carousel {
+  width: 95.7%;
+}
+.findwork-content3-cont .findwork-content3-cont3 {
+  height: 1.6rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+}
+.findwork-content3-cont .findwork-content3-cont3 .findwork-content3-cont3-com1 {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .14rem;
+  width: 1.8rem;
+  height: 1.3rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.findwork-content3-cont .findwork-content3-cont3 .findwork-content3-cont3-com1 img {
+  width: 80%;
+}
+.findwork-content3-cont .findwork-content3-cont3 .findwork-content3-cont3-com2 {
+  float: left;
+  margin-left: .16rem;
+  margin-top: .28rem;
+  width: 38%;
+}
+.findwork-content3-cont .findwork-content3-cont3 .findwork-content3-cont3-com2 h4 {
+  font-size: .18rem;
+  color: #2d3e50;
+  cursor: pointer;
+}
+.findwork-content3-cont .findwork-content3-cont3 .findwork-content3-cont3-com2 p {
+  font-size: .14rem;
+}
+.findwork-content3-cont .findwork-content3-cont3 .findwork-content3-cont3-com2 button {
+  margin-right: .1rem;
+  padding: .02rem .09rem;
+  border-radius: 1px;
+  color: #536a82;
+  font-size: .14rem;
+}
+.findwork-content3-cont .findwork-content3-cont3 .findwork-content3-cont3-com3 {
+  float: left;
+  position: relative;
+  margin-top: .07rem;
+  margin-bottom: .06rem;
+  height: 1.45rem;
+  padding-left: .28rem;
+  color: #2d3e50;
+  border-left: 1px solid #e8e8e8;
+}
+.findwork-content3-cont .findwork-content3-cont3 .findwork-content3-cont3-com3 h4 {
+  margin-top: .32rem;
+  margin-bottom: .44rem;
+  font-size: .18rem;
+  cursor: pointer;
+}
+.findwork-content3-cont .findwork-content3-cont3 .findwork-content3-cont3-com3 p {
+  font-size: .16rem;
+  width: 2.88rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 找职位第四部分 写死内容样式 */
+.findwork-content4-cont {
+  margin-top: .2rem;
+  background-color: #fff;
+}
+.findwork-content4-cont .findwork-content4-cont-part1 {
+  padding-top: 1.16rem;
+  margin: 0 auto;
+  width: 7.6rem;
+  overflow: hidden;
+}
+.findwork-content4-cont .findwork-content4-cont-part1 img {
+  float: left;
+  margin-left: .94rem;
+  width: 2.11rem;
+}
+.findwork-content4-cont .findwork-content4-cont-part1 .findwork-content4-cont-part11 {
+  float: left;
+  margin-top: .25rem;
+  margin-left: 1.42rem;
+  width: 3.12rem;
+  color: #536a82;
+}
+.findwork-content4-cont .findwork-content4-cont-part1 .findwork-content4-cont-part11 h3 {
+  font-size: .24rem;
+  color: #2d3e50;
+}
+.findwork-content4-cont .findwork-content4-cont-part1 .findwork-content4-cont-part11 h4 {
+  margin-top: .16rem;
+  margin-bottom: .16rem;
+  font-size: .18rem;
+}
+.findwork-content4-cont .findwork-content4-cont-part1 .findwork-content4-cont-part11 p {
+  font-size: .14rem;
+}
+.findwork-content4-cont .findwork-content4-cont-part2 {
+  margin: 2.4rem auto 0;
+  width: 7.6rem;
+  padding-bottom: .86rem;
+  overflow: hidden;
+}
+.findwork-content4-cont .findwork-content4-cont-part2 .findwork-content4-cont-part21 {
+  float: left;
+  margin-left: .78rem;
+  color: #536a82;
+}
+.findwork-content4-cont .findwork-content4-cont-part2 .findwork-content4-cont-part21 h3 {
+  margin-bottom: .16rem;
+  font-size: .24rem;
+  color: #2d3e50;
+}
+.findwork-content4-cont .findwork-content4-cont-part2 .findwork-content4-cont-part21 p {
+  font-size: .14rem;
+}
+.findwork-content4-cont .findwork-content4-cont-part2 img {
+  float: left;
+  margin-left: 1.46rem;
+  width: 2.67rem;
+}
+/* 找职位第五部分 写死内容样式 */
+.findwork-content5 {
+  margin-top: .2rem;
+}
+.findwork-content5 img {
+  width: 100%;
+}

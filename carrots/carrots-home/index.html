@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>萝卜多复盘项目—郑州FR组</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="style/public.css">
+	<link rel="stylesheet" href="style/every/iconfont/iconfont.css">
+</head>
+<body ng-app="rApp">
+    <header class="header">
+    	<nav class="navbar navbar-default">
+            <div class="carrots-logo" ui-sref="home">
+	    	    <img class="carrots-logo-img" src="images/carrots.png" alt="萝卜多logo">
+	    	</div>
+	    	<div class="address">
+	    		<i class="iconfont icon-loc iconfont-head"></i> 
+	    	    北京站
+	    	</div>
+	       <div class="container-fluid navbar-cont">
+	            <div class="navbar-header">
+	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse"> 
+   		                <span class="sr-only">切换导航</span>
+   		                <span class="icon-bar"></span>
+   		                <span class="icon-bar"></span>
+   		                <span class="icon-bar"></span>
+   					</button>
+   	            </div>
+	       	    <div class="collapse navbar-collapse navbar-main" id="navbar-collapse">
+	                <ul class="nav navbar-nav navbar-right">
+	                    <li><a ng-class="{navActive:$state.includes('home')}" ui-sref="home">首页</a></li>
+	                    <li><a ng-class="{navActive:$state.includes('jobHunting') || $state.includes('newjob') || $state.includes('jobSearch') || $state.includes('jobNotfind') || $state.includes('jobDetails') || $state.includes('search') || $state.includes('companyNotfind') || $state.includes('companyDetails')}" ui-sref="jobHunting({recommend:undefined})">找职位</a></li>
+	                    <li><a ng-class="{navActive:$state.includes('outstanding') || $state.includes('companyList')}" ui-sref="outstanding">找精英</a></li>
+	                    <li><a ng-class="{navActive:$state.includes('withus')}" ui-sref="withus.aboutus">关于我们</a></li>
+	                </ul>
+	            <!-- </div> -->
+	        </div>
+	    </nav>
+    </header>
+    <div class="content">
+    	<div ui-view></div>
+    </div>
+    <footer class="footer">
+    	<div class="row footer-main">
+    		<div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">
+    			<h4 class="callme-title" ui-sref="withus.aboutus({reload: true})">关于我们</h4>
+    			<p class="callme-slogan">萝卜多——知根知底的社群招聘</p>
+    		</div>
+			<div class="col-xs-5 col-sm-5 col-md-4 col-lg-4">
+				<h4 class="callme-title" ui-sref="withus.callus({reload: true})">联系我们</h4>
+				<p class="callme-way">
+					<i class="iconfont icon-dianhua1 iconfont-footer"></i> 
+					&nbsp;&nbsp;联系电话：（010）59478634
+				</p>
+				<p class="callme-way">
+					<i class="iconfont icon-email iconfont-footer"></i> 
+					&nbsp;&nbsp;邮箱支持：fuhua@ptteng.com
+				</p>
+				<p class="callme-way">
+					<i class="iconfont icon-songhuodizhi iconfont-footer"></i> 
+					&nbsp;&nbsp;地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址:北京市海淀区翠微路甲10#225室
+				</p>
+			</div>
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 callme-part3">
+				<img class="callme-img2" src="images/qrcode.png" alt="链接二维码">
+				<p class="callme-weixin">微信号：ptteng-fuhuaqi</p>
+			</div>
+    	</div>
+    </footer>
+    <div class="copyright">
+    	<small >Copyright &#169; 2015 北京葡萄藤信息技术有限公司 All Rights Reserved | 京ICP备15035574号-1</small>
+    </div>
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    <script src="https://cdn.bootcss.com/oclazyload/1.1.0/ocLazyLoad.min.js"></script>
+    <script type="text/javascript" src="script/app.js"></script>
+    <!-- 各页面主控文件 -->
+    <script type="text/javascript" src="script/controller/homeCtrl.js"></script>
+    <script type="text/javascript" src="script/controller/jobCtrl.js"></script>
+    <script type="text/javascript" src="script/controller/jobSearchCtrl.js"></script>
+    <script type="text/javascript" src="script/controller/companyCtrl.js"></script>
+    <script type="text/javascript" src="script/controller/outmanAndCallUsCtrl.js"></script>
+    <!-- 辅助处理文件 -->
+    <script type="text/javascript" src="script/service/url-service.js"></script>
+    <script type="text/javascript" src="script/service/address.js"></script>
+    <script type="text/javascript" src="script/filter/filter.js"></script>
+    <script type="text/javascript" src="script/directive/pagination.js"></script>
+</body>
+</html>

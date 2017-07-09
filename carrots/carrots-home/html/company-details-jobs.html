@@ -1,0 +1,44 @@
+<!-- 在招职位列表页， 嵌套于公司详情页，样式在公司详情页的样式中 -->
+    <div class="content2-part1-jobnav">
+		<h4 class="content2-part1-jobnav-title">在招职位 {{vm.total}} 个</h4>
+		<div class="content2-part1-jobnav-navbar">
+			<b>职业类别</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<!-- <button class="navbar-but" ui-sref="companyDetails.position({category: undefined,page:1, size:10})">全部</button>
+			<button class="navbar-but" ui-sref="companyDetails.position({category: 1, page:1, size:10})">产品</button>
+			<button class="navbar-but" ui-sref="companyDetails.position({category: 2, page:1, size:10})">技术</button>
+			<button class="navbar-but" ui-sref="companyDetails.position({category: 3, page:1, size:10})">设计</button> -->
+			<input type="radio" id="radio-category-1" ng-model="category" name="category-choose" value="">
+			<label for="radio-category-1" class="choose">全部</label>
+			<input type="radio" id="radio-category-2" ng-model="category" name="category-choose" value="1">
+			<label for="radio-category-2" class="choose">产品</label>
+			<input type="radio" id="radio-category-3" ng-model="category" name="category-choose" value="2">
+			<label for="radio-category-3" class="choose">技术</label>
+			<input type="radio" id="radio-category-4" ng-model="category" name="category-choose" value="3">
+			<label for="radio-category-4" class="choose">设计</label>
+		</div>
+	</div>
+	<div class="content2-part1-joblist">
+		<div class="content2-part1-joblist-item" ng-repeat=" j in vm.cDLParams">
+			<div class="joblist-item-part1">
+				<span>{{j.name}}</span>
+				<span>{{j.companyName}}[{{j.city}}]</span>
+			</div>
+			<div class="joblist-item-part2">
+				{{j.compensation | compensation}}
+			</div>
+			<div class="joblist-item-part3">
+				<span ng-if="j.experience"></span>{{j.experience | experience}}
+				<span ng-if="j.education">/ {{j.education | education}}</span>
+				<span>/ 全职</span>
+			</div>
+			<div class="joblist-item-part4">
+				<!-- <span>{{j.createAt | date:'hh:mm'}}</span>
+				<span>{{j.createAt | date:'昨天'}}</span> -->
+				<span>{{j.createAt | date:'yyyy-MM-dd hh:mm:ss'}}</span>发布
+			</div>
+		</div>
+		<p class="notfind" ng-if="vm.cDLParams.length === 0">很抱歉！没有相应职位结果，请按其他职位类型进行查找！</p>
+	</div>
+	<div class="content2-part1-page">
+		<pagination ng-if="vm.total" total={{vm.total}}></pagination>
+	</div>

@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors gaoxuefeng FR
+ * @date    2017-05-24 20:31:35
+ * @version $Id$
+ */
+ @maxw: 1200px;
+ @minw: 800px;
+ //关于我们页样式集合
+.aboutus {
+	margin: 0 auto;
+	max-width: @maxw;
+	min-width: @minw;
+	.aboutus-side {
+		padding: 0;
+	}
+	.aboutus-sidebar {
+		margin-top: .2rem;
+		margin-right: .5rem;
+		padding: .7rem 0;
+		text-align: center;
+		background-color: #fff;
+		.aboutus-sidebar-main {
+			display: block;
+			height: .4rem;
+			line-height: .4rem;
+			color: #2b3d51;
+            font-size: .16rem;
+			text-decoration: none;
+			&:hover, &:active {
+				color: #fc2b47;
+				background-color: #f7f7f7;
+				border-left: 5px solid #fc2b47;
+			}
+		}
+		.active{
+			color: #fc2b47;
+			background-color: #f7f7f7;
+			border-left: 5px solid #fc2b47;
+		}
+	}
+//关于我们展示内容样式
+	.aboutus-content{
+		margin: .2rem 0;
+		padding: .7rem .9rem 2.48rem .8rem;
+		background-color: #fff;
+		color: #2b3d51;
+		h4 {
+			margin-bottom: .38rem;
+			padding-left: .09rem;
+			border-left: 5px solid #fc2b47;
+		}
+		.aboutus-content-1 {
+			margin-bottom: .38rem;
+			font-size: .14rem;
+		}
+		.aboutus-content-2 {
+			margin-bottom: .18rem;
+			font-size: .14rem;
+		}
+	}
+//联系我们展示内容样式
+	.callus-content{
+		margin: .2rem 0;
+		padding: .7rem .52rem .8rem .8rem;
+		background-color: #fff;
+		&:after {
+			content: " ";
+			width: 0;
+			height: 0;
+			visibility: hidden;
+			clear: both;
+		}
+		h4 {
+			margin-bottom: .16rem;
+			border: none;
+		}
+		.callus-content-1 {
+			margin-bottom: .06rem;	
+		}
+		.callus-content-2 {
+			margin-bottom: .28rem;	
+		}
+		.callus-content-1, .callus-content-2 {
+			padding-left: 0;
+		}
+		.companyadd {
+			// width: 7.98rem;
+			padding: 0;
+			height: 3.38rem;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+.iconfont-diy8 {
+	font-size: .16rem;
+	vertical-align: middle;
+}
+.iconfont-diy9 {
+	margin-left: .2px;
+}
+//调整侧边栏和展示区域的宽度，与ui图相一致
+@media screen and (min-width:1200px) {
+
+	.aboutus-side{width: 2.7rem; float: left;}
+	.aboutus-content, .callus-content {width: 9.3rem; float: left;}
+}
+// @media screen and (max-width:768px)  {
+// 	.aboutus .aboutus-sidebar {margin: .2rem auto 0;}
+// }

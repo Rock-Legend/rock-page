@@ -1,0 +1,89 @@
+body {
+  max-width: 640px;
+  min-width: 310px;
+  width: 100%;
+  max-height: 1136px;
+  margin: auto;
+  font-family: "微软雅黑 light";
+  background-color: #f0f0f0;
+}
+.result-page {
+  background-color: #29bde0;
+}
+header {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  max-width: 640px;
+  min-width: 310px;
+  width: 100%;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  background-color: #29bde0;
+  color: #fff;
+  border-bottom: 1px solid #74d4eb;
+  text-align: center;
+  font-size: .34rem;
+}
+header .part1 {
+  float: left;
+  position: relative;
+  width: 12%;
+  height: inherit;
+}
+header .part1 a {
+  display: inline-block;
+  width: 100%;
+  height: inherit;
+}
+header .part1 img {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: auto;
+  width: 42%;
+}
+header .part2 {
+  float: right;
+  position: relative;
+  width: 12%;
+  height: inherit;
+}
+header .part2 a {
+  display: inline-block;
+  width: 100%;
+  height: inherit;
+}
+header .part2 img {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: auto;
+  width: 50%;
+}
+.headercopy {
+  height: 0.88rem;
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 625%;
+  }
+}
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 470%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 312.5%;
+  }
+}

@@ -1,0 +1,31 @@
+
+<p class="f_backcap"><span>模块管理</span>    <button class="btn btn-success" ui-sref="field.newModule">新增</button></p>
+<div class="f_comlist">
+    <table class="table">
+        <tr>
+            <td>自增长ID</td>
+            <td>名称</td>
+            <td>对应URL地址</td>
+            <td>父模块ID</td>
+            <td>模块类型</td>
+            <td>数据更新时间</td>
+            <td>创建人ID</td>
+            <td>操作</td>
+        </tr>
+        <tr ng-repeat="x in vm.modules">
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.url}}</td>
+            <td>{{x.parentID}}</td>
+            <td>{{x.type}}</td>
+            <td>{{x.updateAt | date:"yyyy-MM-dd HH:mm:ss"}}</td>
+            <td>{{x.createBy}}</td>
+            <td>
+                <button class="btn btn-success" ui-sref="field.newModule({mid:vm.modules[$index].id})">编辑</button>
+                <button class="btn btn-danger" ng-click="vm.f_delete($index)">删除</button>
+            </td>
+        </tr>
+    </table>
+    <pagination ng-if="vm.total" total="{{vm.total}}"></pagination>
+
+</div>

@@ -1,0 +1,182 @@
+body {
+  background-color: #29bde0 !important;
+}
+.hint {
+  padding-left: .46rem;
+  height: .82rem;
+  line-height: .82rem;
+  background-color: #b9e9f5;
+  font-size: .26rem;
+}
+.hint .circle {
+  position: relative;
+  float: right;
+  right: .15rem;
+  margin: .15rem 0;
+  display: inline-block;
+  width: .52rem;
+  height: .52rem;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  text-align: center;
+  background-color: #fbb435;
+}
+.hint .circle img {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: auto;
+  left: .05rem;
+  width: .27rem;
+}
+.hint .circle img:link,
+.hint .circle img:visited,
+.hint .circle img:hover,
+.hint .circle img:active {
+  transition-duration: 10s;
+  transform-origin: 20% 50%;
+  -webkit-transform-origin: 20% 50%;
+  transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  /* IE 9 */
+  -webkit-transform: rotate(360deg);
+  /* Safari and Chrome */
+  -o-transform: rotate(360deg);
+  /* Opera */
+  -moz-transform: rotate(360deg);
+  /* Firefox */
+}
+.hintway {
+  padding-left: .7rem;
+  font-size: .24rem;
+  color: #fff;
+}
+.hintway #triangle-down {
+  width: 0;
+  height: 0;
+  border-top: 15px solid #b9e9f5;
+  border-right: 7.5px solid transparent;
+  border-left: 7.5px solid transparent;
+}
+.hintway p {
+  margin: .12rem 0;
+}
+.main {
+  zoom: 1;
+  width: 94%;
+  margin: .36rem auto 0;
+}
+.main:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.main .main-piece {
+  float: left;
+  width: 33.3333%;
+}
+.main .main-piece:hover .chooseway {
+  opacity: 1;
+}
+.main .main-piece .part {
+  margin: 0 .15rem .2rem;
+  background-color: #f5c97b;
+  border: 2px solid #fff;
+  font-size: .3rem;
+}
+.main .main-piece .part .role {
+  padding: .36rem .32rem;
+  text-align: center;
+}
+.main .main-piece .part .role a {
+  color: fff;
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+.main .main-piece .part .role a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.main .main-piece .part .number {
+  background-color: #83b09a;
+  text-align: center;
+  font-size: .23rem;
+  color: #fff;
+}
+.main .main-piece .chooseway {
+  opacity: 0;
+  text-align: center;
+  font-size: 0;
+}
+.main .main-piece .chooseway button {
+  display: inline-block;
+  width: .38rem;
+  height: .38rem;
+  margin: .1rem .01rem .2rem;
+  background: url(../images/choose.png) no-repeat;
+  background-size: 1.56rem .38rem;
+  border: none;
+}
+.main .main-piece .chooseway .kill {
+  background-position: 0 0;
+}
+.footercopy {
+  height: 1.9rem;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  max-width: 640px;
+  min-width: 310px;
+  width: 100%;
+  text-align: center;
+  background-color: #29bde0;
+}
+footer button {
+  width: 80%;
+  margin: .4rem auto .6rem;
+  padding: .25rem 0;
+  border: none;
+  outline: none;
+  background-color: #fbb435;
+  color: #fff;
+  font-size: .4rem;
+  font-family: "微软雅黑 light";
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 580%;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 500%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 440%;
+  }
+}
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 350%;
+  }
+}
+@media screen and (max-width: 380px) {
+  html {
+    font-size: 312.5%;
+  }
+}

@@ -1,0 +1,10 @@
+
+<p class="f_backcap"><span>账户编辑</span></p>
+<form class="f_modify">
+    <label>登&ensp;名&ensp;称&emsp;<input ng-model="vm.manager.name" class="form-control" type="text" required></label><br>
+    <label>手&ensp;机&ensp;号&emsp;<input ng-disabled="vm.mid" class="form-control" type="text"></label><br>
+    <label>密&emsp;&emsp;码&emsp;<input ng-model="vm.manager.pwd" class="form-control" type="password" required></label><br>
+    <label>密码确认&emsp;<input ng-model="vm.pwd" class="form-control" type="password" required></label><br>
+    <button type="submit" class="btn btn-success" ng-click="vm.f_save()">保存</button>
+    <button class="btn" ui-sref="field.manager">取消</button>
+</form>

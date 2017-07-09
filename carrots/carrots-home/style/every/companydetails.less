@@ -1,0 +1,293 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors gaoxuefeng
+ * @date    2017-05-28 17:29:22
+ * @version $Id$
+ */
+ @maxw: 1200px;
+ @minw: 320px;
+ /* 公司详情页样式集合 */
+.companydetails-content1{
+	margin: .2rem auto;
+	max-width: @maxw;
+	min-width: @minw;
+	color: #2d3e50;
+	background-color: #fff;
+	overflow: hidden;
+}
+.companydetails-content1-part1, .companydetails-content1-part2{
+	float: left;
+	font-size: .14rem;
+}
+/* 第一部分 公司logo和公司基本信息 */
+.companydetails-content1-part1{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #e8e8e8;
+    img{width: 90%;}
+}
+.companydetails-content1-part2{
+	margin-top: .46rem;
+	margin-left: .28rem;
+	.content1-part2-com{
+		font-size: .18rem;
+		font-weight: bold;
+		color: #2d3e50;
+	}
+	.content1-part2-pag {
+		padding: .05rem .11rem;
+		color: #fff;
+		background-color: #fc2b47;
+		vertical-align: text-top;
+		border: none;
+		border-radius: .23rem;
+		font-size: .12rem;
+	}
+	.content1-part2-companyslogan, .content1-part2-companyname{
+		margin: .18rem 0;
+		color: #536a82;
+	}
+	.content1-part2-companyslogan{
+		font-size: .14rem;
+	}
+	.content1-part2-companyname{
+		font-size: .12rem;
+	}
+}
+.iconfont-diy4{
+			font-size: .12rem!important;
+		}
+/* 第二部分 公司详情信息和公司在招职位 及右侧公司信息 */
+.companydetails-content2{
+	margin: .4rem auto .2rem;
+	max-width: @maxw;
+	min-width: @minw;
+	color: #2d3e50;
+	background-color: #fff;
+	overflow: hidden;
+}
+.companydetails-content2-part1, .companydetails-content2-part2, .companydetails-content2-part3{
+	float: left;
+}
+/* 左侧公司详情信息和公司在招职位 导航 */
+.companydetails-content2-part1{
+	// width: 75%;/* 7.96rem */
+	padding-right: .21rem;
+	padding-left: .2rem;
+	.content2-part1-nav{
+		margin-top: .1rem;
+		// margin-left: .2rem;
+		border-bottom: 1px solid #e8e8e8;
+		.content2-part1-nav-but{
+			padding: .08rem .09rem;
+			color: #536a82;
+			background-color: transparent;
+			font-size: .16rem;
+			border: none;
+			border-bottom: 3px solid transparent;
+			outline: none;
+			&:hover, &:active {
+				color: #fc2b47;
+				border-bottom: 3px solid #fc2b47;
+			}
+		}
+		.navActive{
+			color: #fc2b47;
+			border-bottom: 3px solid #fc2b47;
+		}
+	}
+	/* 左侧公司详情信息部分 */
+	.content2-part1-main{
+		margin-top: -.1rem;
+		margin-right: -.21rem;
+		padding-top: .1rem;
+		padding-right: .21rem;
+		border-right: 3px solid #f4f4f4;
+		.content2-part1-main-part1{
+			overflow: hidden;
+		}
+		.content2-part1-main-part2{
+			margin-top: .04rem;
+			margin-bottom: .38rem;
+			overflow: hidden;
+			// p:last-child{margin:0;}
+			.content2-part1-main-cont{
+				margin-bottom: .2rem;
+				font-size: .12rem;
+				color: #536a82;
+				&:last-child{margin:0;}
+			}
+		}
+		.content2-part1-main-title1, .content2-part1-main-title2{
+			margin-top: .2rem;
+			padding-left: .08rem;
+			border-left: 5px solid #fc2b47;
+			font-size: .16rem;
+			font-weight: bold;
+			color: #2d3e50;
+		}
+		.content2-part1-main-title1{margin-bottom: .15rem;}
+		.content2-part1-main-title2{margin-bottom: .26rem;}
+		.content2-part1-main-logo, .content2-part1-main-caption{
+			float: left;
+		}
+		.content2-part1-main-logo{
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+			width: 1.5rem;
+			height: 1.5rem;
+			border: 1px solid #e8e8e8;
+			img{width: 90%;}
+		}
+		.content2-part1-main-caption{
+			margin: .12rem 0 0 .2rem;
+			// width: 2.8rem;
+			width: 72%;
+			h4{margin-bottom: .18rem;font-size: .16rem;font-weight: bold; color: #2d3e50;}
+			p{font-size: .14rem; color: #536a82;text-align: justify;}
+		}
+	}
+	/* 左侧公司在招职位部分 导航 */
+	.content2-part1-jobnav, .content2-part1-joblist{
+		margin-top: -.1rem;
+		margin-right: -.21rem;
+		padding-top: .1rem;
+		padding-right: .21rem;
+		border-right: 3px solid #f4f4f4;
+	}
+	.content2-part1-jobnav{
+		overflow: hidden;
+		.content2-part1-jobnav-title{
+			margin: .2rem 0;
+			padding-left: .1rem;
+			font-size: .16rem;
+			font-weight: bold;
+			border-left: 5px solid #fc2a48;
+		}
+		.content2-part1-jobnav-navbar{
+			margin-bottom: .15rem;
+			padding: .09rem 0 .09rem .09rem;
+			color: #2d3e50;
+			font-size: .14rem;
+			border: 1px solid #e8e8e8;
+			.choose{
+				margin-right: .06rem;
+				margin-bottom: 0;
+				padding: .03rem .12rem;
+				background-color: transparent;
+				font-weight: normal;
+				&:hover, &:active{
+					color: #fff;
+					background-color: #fc2a48;
+				}
+			}
+			input[type=radio]{
+				display: none;
+			}
+			input[type=radio]:checked + label{
+				color: #fff;
+				background-color: #fc2a48;
+			}
+		}
+	}
+	.content2-part1-page{
+		ul{margin-top: 0.05rem;}
+	}
+	/* 左侧公司在招职位部分 列表 */
+	.content2-part1-joblist{
+		.content2-part1-joblist-item{
+			margin-bottom: .2rem;
+			padding: .25rem 0;
+			text-align: center;
+			font-size: .14rem;
+			border: 1px solid #e8e8e8;
+			border-radius: 5px;
+			overflow: hidden;
+			&:hover, &:active{
+				background-color: #f6f7f8;
+			}
+			.joblist-item-part1, .joblist-item-part2, .joblist-item-part3{
+				float: left;
+			}
+			.joblist-item-part1{
+				width: 28.37%;
+				font-weight: bold;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				cursor: pointer;
+			}
+			.joblist-item-part2{
+				width: 13.13%;
+				color: #fc2a48;
+			}
+			.joblist-item-part3{
+				width: 32%;
+			}
+			.joblist-item-part4{
+				float: right;
+  				width: 26%;
+  				min-width: 1.36rem;
+  				text-align: center;
+  				color: #999;
+			}
+		}
+		.notfind {
+			margin-top: .2rem;
+			text-align: center;
+		}
+	}
+}
+/* 右侧公司信息样式 */
+.companydetails-content2-part2{
+	margin-top: .4rem;
+	margin-bottom: .37rem;
+	.part21, .part22{
+		margin-left: .48rem;
+		color: #536a82;
+		font-size: .14rem;
+		overflow: hidden;
+		.part21-h51{
+			margin-top: 0;
+			margin-bottom: .28rem;
+			font-weight: bold;
+			.part21-h51-s{color: #e8e8e8;}
+		}
+	}
+	.part21{
+		.part21-p1{
+			margin-left: .42rem;
+			margin-bottom: .28rem;
+			.iconfont-diy5{
+				font-size: .16rem;
+				vertical-align: middle;
+			}
+		}
+	}
+	.part22{
+		margin-top: .23rem;
+		margin-bottom: .2rem;
+		.part22-p1{
+			margin-bottom: .19rem;
+			display: inline-block;
+			width: 2.88rem;
+			text-align: center;
+			.part22-p1-pag{
+				margin-top: .19rem;
+				margin-right: .2rem;
+				padding: .02rem .1rem;
+				font-size: .12rem;
+				color: #536a82;
+				background-color: transparent;
+				border: 1px solid #d9d9d9;
+				border-radius: .23rem;
+				outline: none;
+			}
+		}
+	}		
+}	

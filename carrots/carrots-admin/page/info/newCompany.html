@@ -1,0 +1,224 @@
+
+<p class="f_backcap">
+    <span><span ng-if="vm.id !== undefined">{{vm.company.name}}</span>详细信息</span>
+    <select ng-model="vm.company.approved" class="form-control">
+         <option value="0">未认证</option>
+         <option value="1">已认证</option>
+    </select>
+</p>
+<form class="f_adds" novalidate>
+    <label>公司名称 <input ng-model="vm.company.name" class="form-control" type="text" required></label>
+    <label>公司slogan<input ng-model="vm.company.slogan" class="form-control" type="text" required></label>
+    <label>公司人数
+        <input ng-model="vm.company.totalNum" class="form-control" type="number" required></label>
+    <label>融资规模
+        <select ng-model="vm.company.finacing" class="form-control">
+            <option value="" ng-selected="vm.company.finacing==''||vm.company.finacing==undefined" selected>全部</option>
+            <option value="0">无需融资</option>
+            <option value="1">天使轮</option>
+            <option value="2">A轮</option>
+            <option value="3">B轮</option>
+            <option value="4">BC轮</option>
+            <option value="5">D轮及以上</option>
+            <option value="6">上市公司</option>
+        </select>
+    </label>
+    <label>地&emsp;&emsp;区
+        <select ng-model="vm.company.province" class="form-control f_city" ng-change="vm.toCity()">
+            <option value="">全部</option>
+            <option ng-repeat="x in vm.province" value="{{x.ProID}}">{{x.ProName}}</option>
+        </select>—<select ng-model="vm.company.city" class="form-control f_city">
+            <option value="">全部</option>
+            <option ng-repeat="x in vm.city" value="{{x.CityID}}">{{x.CityName}}</option>
+        </select>
+    </label>
+    <label>行&emsp;&emsp;业
+        <select ng-model="vm.company.industry" class="form-control">
+            <option value="" ng-selected="vm.company.industry==''||vm.company.industry==undefined" selected>全部</option>
+            <option value="0">互联网</option>
+            <option value="1">电子商务</option>
+            <option value="2">企业服务</option>
+            <option value="3">O2O</option>
+            <option value="4">教育</option>
+            <option value="5">金融</option>
+            <option value="6">游戏</option>
+        </select>
+    </label>
+    <img class="f_companyLogo" ng-src="{{vm.company.logo}}">
+    <label>公司logo<a href="javascript:;" ng-click="" class="f_file">选择文件<input type="file" nv-file-select="" uploader="uploaderC"></a><br/>
+    </label>
+    <!--upload-->
+    <table class="table">
+        <tbody>
+            <tr>
+                <th width="50%">文件名</th>
+                <th ng-show="uploaderC.isHTML5">大小</th>
+                <th ng-show="uploaderC.isHTML5">进度</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+
+
+            <tr ng-repeat="item in uploaderC.queue">
+                <td>
+                    <strong>{{ item.file.name }}</strong>
+                    <!-- Image preview -->
+                    <!--auto height-->
+                    <!--<div ng-thumb="{ file: item.file, width: 100 }"></div>-->
+                    <!--auto width-->
+                    <div ng-show="uploaderC.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                    <!--fixed width and height -->
+                    <!--<div ng-thumb="{ file: item.file, width: 100, height: 100 }"></div>-->
+                </td>
+                <td ng-show="uploaderC.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                <td ng-show="uploaderC.isHTML5">
+                    <div class="progress" style="margin-bottom: 0;">
+                        <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                    </div>
+                </td>
+                <td class="text-center">
+                    <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+                    <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                    <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+                </td>
+                <td nowrap>
+                    <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                        <span class="glyphicon glyphicon-upload"></span> 上传
+                    </button>
+                    <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+                        <span class="glyphicon glyphicon-ban-circle"></span> 取消
+                    </button>
+                    <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                        <span class="glyphicon glyphicon-trash"></span> 删除
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <label>公司介绍<textarea class="f_textarea" ng-model="vm.company.summary" required></textarea></label><br>
+    <p>{{vm.company.summary}}</p>
+    <label>公司标签<input class="form-control" type="text" ng-model="vm.tag"></label> <button class="btn btn-success" ng-click="vm.addTag()">+</button><br>
+    <span class="btn btn-info f_tag" ng-repeat="x in vm.company.companyTagList track by $index" ng-click="vm.deleteTag($index)">{{x.tag}}</span>
+    <p class="f_backcap">
+        <span>公司产品</span>
+    </p>
+    <div class="f_adds">
+        <label>产品名称<input ng-model="vm.company.productName" class="form-control" type="text"></label>
+        <label>产品slogan<input ng-model="vm.company.productSolgan" class="form-control" type="text"></label>
+        <img class="f_companyLogo" ng-src="{{vm.company.productLogo}}">
+        <label>产品logo<a href="javascript:;" class="f_file">选择文件<input type="file" nv-file-select="" uploader="uploaderA"></a></label>
+        <!--upload--><br>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th width="50%">文件名</th>
+                    <th ng-show="uploaderA.isHTML5">大小</th>
+                    <th ng-show="uploaderA.isHTML5">进度</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+
+
+                <tr ng-repeat="item in uploaderA.queue">
+                    <td>
+                        <strong>{{ item.file.name }}</strong>
+                        <!-- Image preview -->
+                        <!--auto height-->
+                        <!--<div ng-thumb="{ file: item.file, width: 100 }"></div>-->
+                        <!--auto width-->
+                        <div ng-show="uploaderA.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                        <!--fixed width and height -->
+                        <!--<div ng-thumb="{ file: item.file, width: 100, height: 100 }"></div>-->
+                    </td>
+                    <td ng-show="uploaderA.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                    <td ng-show="uploaderA.isHTML5">
+                        <div class="progress" style="margin-bottom: 0;">
+                            <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+                        <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                        <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+                    </td>
+                    <td nowrap>
+                        <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                            <span class="glyphicon glyphicon-upload"></span> 上传
+                        </button>
+                        <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+                            <span class="glyphicon glyphicon-ban-circle"></span> 取消
+                        </button>
+                        <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                            <span class="glyphicon glyphicon-trash"></span> 删除
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <label>产品介绍<textarea ng-model="vm.company.productSummary" class="f_textarea"></textarea></label>
+
+    </div>
+    <p class="f_backcap">
+        <span>招聘公司相关信息</span>
+    </p>
+    <div class="f_adds">
+        <label>手机<input ng-model="vm.company.phone" class="form-control" type="number" maxlength="11"  oninput="if(value.length>11)value=value.slice(0,11)"></label>
+        <label>邮箱<input ng-model="vm.company.mail" class="form-control" type="text" maxlength="30"></label><br>
+        <label>详细地址<input ng-model="vm.company.address" class="form-control address" type="text"></label>
+
+        <img ng-if="vm.company.map !== ''" class="f_companyLogo" ng-src="{{vm.company.map}}">
+        <label>地图<a href="javascript:;" class="f_file">选择文件<input type="file" nv-file-select="" uploader="uploaderB"></a></label>
+        <!--upload-->
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th width="50%">文件名</th>
+                    <th ng-show="uploaderB.isHTML5">大小</th>
+                    <th ng-show="uploaderB.isHTML5">进度</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+
+
+                <tr ng-repeat="item in uploaderB.queue">
+                    <td>
+                        <strong>{{ item.file.name }}</strong>
+                        <!-- Image preview -->
+                        <!--auto height-->
+                        <!--<div ng-thumb="{ file: item.file, width: 100 }"></div>-->
+                        <!--auto width-->
+                        <div ng-show="uploaderB.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                        <!--fixed width and height -->
+                        <!--<div ng-thumb="{ file: item.file, width: 100, height: 100 }"></div>-->
+                    </td>
+                    <td ng-show="uploaderB.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                    <td ng-show="uploaderB.isHTML5">
+                        <div class="progress" style="margin-bottom: 0;">
+                            <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+                        <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                        <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+                    </td>
+                    <td nowrap>
+                        <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                            <span class="glyphicon glyphicon-upload"></span> 上传
+                        </button>
+                        <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+                            <span class="glyphicon glyphicon-ban-circle"></span> 取消
+                        </button>
+                        <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                            <span class="glyphicon glyphicon-trash"></span> 删除
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success" ng-click="vm.f_online()">保存</button>
+    <button class="btn" ui-sref="field.companyList">取消</button>
+</form>

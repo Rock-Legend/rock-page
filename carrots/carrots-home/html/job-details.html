@@ -1,0 +1,68 @@
+<!-- 职位详情页 -->
+        <div class="jobdetails-content1">
+    		<div class="jobdetails-content1-part1">
+                <div class="jobdetails-content1-part1-border">
+                    <div class="content1-part1-1">
+                        <h4 class="content1-part1-1-title">{{vm.jDParams.name}}</h4>
+                        <small>{{vm.jDParams.companyName}}</small>
+                        <p class="content1-part1-1-part1">
+                            <span class="pay" ng-if="vm.jDParams.compensation !==undefined">{{vm.jDParams.compensation | compensation}}</span>&nbsp;&nbsp;&nbsp;
+                            <i class="iconfont icon-didian2" ng-if="vm.cDParams.county !==undefined"></i>
+                            <span>{{vm.cDParams.province | province}}</span>&nbsp;&nbsp;
+                            <span ng-if="vm.cDParams.county !==undefined">{{vm.cDParams.city | city}}</span>&nbsp;&nbsp;
+                            <span ng-if="vm.cDParams.province !==undefined">{{vm.cDParams.county | county}}</span>&nbsp;&nbsp;&nbsp;
+                            <i class="iconfont icon-xueshimao" ng-if="vm.jDParams.education !==undefined"></i> &nbsp;{{vm.jDParams.education | education}}&nbsp;&nbsp;&nbsp;
+                            <i class="iconfont icon-bao-copy" ng-if="vm.jDParams.experience !==undefined"></i> &nbsp;{{vm.jDParams.experience | experience}}
+                        </p>
+                        <p class="content1-part1-1-part2">
+                            <button class="content1-part1-1-part2-pag" disabled ng-repeat=" c in vm.jDParams.professionTagList">{{c}}}</button>
+                            <!-- <button class="content1-part1-1-part2-pag" disabled>带薪年假</button>
+                            <button class="content1-part1-1-part2-pag" disabled>年14薪</button>
+                            <button class="content1-part1-1-part2-pag" disabled>健康体检</button>
+                            <button class="content1-part1-1-part2-pag" disabled>国企背景</button> -->
+                        </p>
+                        <small class="publish-time">
+                            <i class="iconfont icon-shijian"></i>
+                            发布时间：{{vm.jDParams.releaseAt | date:'yyyy-MM-dd'}}&nbsp;&nbsp;&nbsp;{{vm.jDParams.releaseAt | date:'hh: mm'}}
+                        </small>
+                    </div>
+                    <div class="content1-part1-2">
+                        <h4 class="content1-part1-2-title">&nbsp;&nbsp;职位描述</h4>
+                        <p class="content1-part1-2-part">岗位职责：</p>
+                        <p class="content1-part1-2-part"> {{vm.jDParams.responsibility}}；</p>
+                        <br>
+                        <p class="content1-part1-2-part">必备条件：</p>
+                        <p class="content1-part1-2-part"> {{vm.jDParams.requisite}}；</p>
+                        <br>
+                        <p class="content1-part1-2-part">公司福利：</p>
+                        <p class="content1-part1-2-part">{{vm.jDParams.boon}}</p>
+                    </div>
+                </div>
+    			
+    			<div class="content1-part1-3">
+    				<i class="iconfont icon-fenxiang1"></i>&nbsp;
+	    			分享
+	    			<span class="content1-part1-3-share">
+	    				<i class="iconfont icon-weixin2"></i>
+						<i class="iconfont icon-iconfontqq"></i>
+						<i class="iconfont icon-weibo"></i>
+	    			</span>
+					<button class="content1-part1-3-but">我感兴趣</button>
+    			</div>
+    		</div>
+    		<div class="jobdetails-content1-part2">
+				<div class="content1-part2-logo">
+					<img src="{{vm.jDParams.companyLogo}}" alt="公司logo">
+				</div>
+				<p class="content1-part2-logohint">{{vm.jDParams.companyName}} <i class="iconfont icon-lianjie"></i></p>
+				<h5 class="content1-part2-com">基本信息 &nbsp;<span>———————————————</span></h5>
+				<p class="content1-part2-mess">
+					<i class="iconfont icon-userpro"></i>
+					&nbsp;{{vm.cDParams.totalNum}}人
+				</p>
+				<p class="content1-part2-mess" ng-if="vm.jDParams.industry !==undefined">
+					<i class="iconfont icon-lingdai_tie"></i>
+					&nbsp;{{vm.jDParams.industry | industry}}
+				</p>
+    		</div>
+    	</div>

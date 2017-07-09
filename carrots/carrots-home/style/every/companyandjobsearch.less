@@ -1,0 +1,287 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors gaoxuefeng
+ * @date    2017-05-28 10:58:14
+ * @version $Id$
+ */
+ @maxw: 1200px;
+ @minw: 800px;
+ /* 搜索公司/搜索职位/推荐职位/最新职位列表页样式集合 */
+
+/* 搜索公司/搜索职位顶部样式 */
+.companysearch-nav{
+	padding-top: .13rem;
+	border-bottom: 2px solid #fc2b47;
+	.companysearch-nav-but{
+		padding: .03rem .22rem;
+		color: #2d3e51;
+		background-color: transparent;
+		font-size: .16rem;
+		border: none;
+		&:hover, &:active {
+			color: #fff;
+			background-color: #fc2b47;
+		}
+	}
+	.navbarActive{
+			color: #fff;
+			background-color: #fc2b47;
+		}
+}
+/* 推荐职位/最新职位 顶部样式*/
+.companysearch-nav2{
+	padding-top: .18rem;
+	padding-left: .2rem;
+	.companysearch-nav2-main{
+		margin-bottom: .05rem;
+		color: #2d3e51;
+		font-size: .16rem;
+		font-weight: bold;
+	}
+}
+.companysearch-nav, .companysearch-nav2, .companysearch-content1, .companysearch-content2, .jobsearch-content2{
+	margin: 0 auto;
+	max-width: @maxw;
+	min-width: @minw;
+}
+/* 搜索区样式集合 */
+.companysearch-content1-main{
+	padding: .15rem .2rem 0 .22rem;
+	background-color: #fff;
+	font-size: .14rem;
+	overflow: hidden;
+	.content1-main-title{
+		font-weight: bold;
+		color: #2d3e50;
+	}
+	.content1-main-name{
+		width: 4rem;
+		height: .4rem;
+		padding-left: .16rem;
+		border: 1px solid #e8e8e8;
+	}
+	.content1-main-hint{
+		color: #999;
+	}
+	.choose{
+		margin-right: .12rem;
+		padding: .02rem .13rem;
+		font-weight: normal;
+		color: #536a82;
+		background-color: transparent;
+		border: none;
+		outline: none;
+	}
+	input[type=radio]{
+		display: none;
+	}
+	input[type=radio]:checked + label{
+		color: #fff;
+		background-color: #fc2b47;
+	}
+	.content1-main-switch {
+		float: right;
+		margin-bottom: .14rem;
+		.content1-main-recover{
+			margin-right: .12rem;
+			padding: .03rem .16rem;
+			color: #2d3e50;
+			background-color: transparent;
+			border: none;
+			outline: none;
+		}
+		.content1-main-go{
+			padding: .03rem .16rem;
+			color: #fff;
+			background-color: #fc2b47;
+			border: none;
+			outline: none;
+		}
+	}	
+}
+/* 搜素公司页第二部分样式 */
+.companysearch-content2{
+	background-color: #fff;
+}
+/* 搜索公司列表展示区域 */
+.companysearch-content2-list{
+	margin: .2rem 0;
+	padding: .2rem .05rem;
+	.content2-list-main{
+		margin-bottom: .32rem;
+		border: 1px solid #d9d9d9;
+		border-radius: 10px;
+		overflow: hidden;
+		&:hover, &:active {
+			box-shadow: 0 0 5px #ccc;
+		}
+		.content2-list-main-logo{
+			float: left;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: .22rem .19rem .23rem .23rem;
+			width: 1.15rem;
+			height: 1.15rem;
+			border: 1px solid #e8e8e8;
+			cursor: pointer;
+			img{width: 90%;}
+		}
+		.content2-list-main-com{
+			float: left;
+			margin-top: .3rem;
+			width: 45%;
+			color: #536a82;
+			.list-main-com-1{
+				font-size: .16rem;
+				font-weight: bold;
+				color: #2d3e50;
+				cursor: pointer;
+			}
+			.list-main-com-2{
+				font-size: .14rem;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				span{color: #fc2a48;}
+			}
+		}
+		.content2-list-main-genre{
+			clear: both;
+			font-size: 0;
+			color: #999;
+			line-height: initial;
+			background-color: #fafafa;
+			overflow: hidden;
+			.content2-list-main-genre-part1, .content2-list-main-genre-part2, .content2-list-main-genre-part3 {
+				display: inline-block;
+				padding-top: .12rem;
+				padding-bottom: .11rem;
+				text-align: center;
+				font-size: .14rem;
+			}
+			.content2-list-main-genre-part1{
+				width: 40%;
+			}
+			.content2-list-main-genre-part2{
+				width: 30%;
+				span{
+					display: block;
+					margin-bottom: -5px;
+					width: 80%;
+					font-size: .14rem;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+			}
+			.content2-list-main-genre-part3{
+				width: 30%;
+				span{
+					display: block;
+					margin-bottom: -5px;
+					width: 80%;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+			}
+			.iconfont-diy6{
+				font-size: .16rem;
+				vertical-align: middle;
+			}
+			.iconfont-diy7{
+				font-size: .16rem;
+				// vertical-align: middle;
+			}
+		}
+	}
+}
+.companysearch-content2-page{
+	padding-right: .2rem;
+	clear: both;
+	ul{margin-top: 0;}
+}
+/* 搜素职位页第二部分 列表展示样式 推荐职位/最新职位共用此样式*/
+.jobsearch-content2{
+	background-color: #fff;
+}
+.jobsearch-content2-list{
+	margin: .2rem 0;
+	padding: .2rem .05rem;
+	.content2-list-main{
+		margin-bottom: .2rem;
+		font-size: 0;
+		border: 1px solid #e8e8e8;
+		border-radius: 10px;
+		overflow: hidden;
+		h4{font-size: .16rem;font-weight: bold;}
+		.content2-list-main-part1, .content2-list-main-part2{
+			display: inline-block;
+			vertical-align: middle;
+			font-size: .14rem;
+			width: 50%;
+		}
+		.content2-list-main-part1{
+			width: 48.3%;
+			padding: .11rem 0 .11rem .2rem;
+			h4{
+				color: #2d3e51;
+				cursor: pointer;
+			}
+			.release-time {
+				font-size: .12rem;
+				color: #999;
+			}
+			.pay{
+				color: #fc2a48;
+			}
+			.request{color: #536a82;}
+		}
+		.content2-list-main-part2{
+			width: 51.7%;
+			padding-left: .64rem;
+			padding-right: .3rem;
+			border-left: 1px solid #e8e8e8;
+			.pag{
+				margin-right: .18rem;
+				font-size: .12rem;
+				color: #536a82;
+				padding: .02rem .06rem;
+				background: transparent;
+				border: 1px solid #d9d9d9;
+				border-radius: .2rem;
+			}
+			.part2-1{
+				display: inline-block;
+				font-size: .14rem;
+				.part2-1-p1{
+					margin-top: .06rem;
+					font-weight: bold;
+					color: #2d3e50;
+					cursor: pointer;
+				}
+				.part2-1-p2{
+					color: #536a82;
+				}
+			}
+			.part2-2{
+				float: right;
+				display: flex;
+			    justify-content: center;
+			    align-items: center;
+				width: 1rem;
+				height: 1rem;
+				border: 1px solid #d9d9d9;
+				border-radius: 5px;
+				img{width: 90%;}
+			}
+		}
+	}
+	.jobsearch-content2-list-page{
+		padding-right: .2rem;
+		width: 100%;
+		ul{margin: 0;}
+	}
+}
